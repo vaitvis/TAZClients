@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://semantika.lt/ns/Time#" >
+    <!ENTITY semlt "http://semantika.lt/ns/SemLT#" >
+    <!ENTITY semlt1 "http://semantika.lt/ns/SemLT1#" >
+    <!ENTITY agents "http://semantika.lt/ns/Agents#" >
+    <!ENTITY events "http://semantika.lt/ns/Events#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY events1 "http://semantika.lt/ns/Events1#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY locations "http://semantika.lt/ns/Locations#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ann "http://semantika.lt/ns/Annotations#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://semantika.lt/ns/Events1#"
+     xml:base="http://semantika.lt/ns/Events1"
+     xmlns:semlt1="http://semantika.lt/ns/SemLT1#"
+     xmlns:events="http://semantika.lt/ns/Events#"
+     xmlns:agents="http://semantika.lt/ns/Agents#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://semantika.lt/ns/Time#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:locations="http://semantika.lt/ns/Locations#"
+     xmlns:events1="http://semantika.lt/ns/Events1#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ann="http://semantika.lt/ns/Annotations#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Events1">
+        <owl:imports rdf:resource="http://semantika.lt/ns/Agents1"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/Events"/>
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Events1"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/Locations1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Agents1#Andrius_Kubilius -->
+
+    <rdf:Description rdf:about="http://semantika.lt/ns/Agents1#Andrius_Kubilius">
+        <events:has__position_held rdf:resource="&events1;Andrius_Kubilius__eina__premjero_pareigas"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents1#Daiva_Ulbinaite -->
+
+    <rdf:Description rdf:about="http://semantika.lt/ns/Agents1#Daiva_Ulbinaite">
+        <events:has__position_held rdf:resource="&events1;Daiva_Ulbinaite_eina_patarejo_pareigas"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents1#Dalia_Grybauskaite -->
+
+    <rdf:Description rdf:about="http://semantika.lt/ns/Agents1#Dalia_Grybauskaite">
+        <events:has__position_held rdf:resource="&events;Dalia_Grybauskaite__eina__prezidentes_pareigas"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#2009-07-12 -->
+
+    <owl:NamedIndividual rdf:about="&events;2009-07-12">
+        <rdf:type rdf:resource="&time;time_other"/>
+        <rdfs:label xml:lang="lt">2009-07-12</rdfs:label>
+        <time:time_value rdf:datatype="&xsd;dateTime">2009-07-12T12:00:00</time:time_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#Atstovavimas1 -->
+
+    <owl:NamedIndividual rdf:about="&events;Atstovavimas1">
+        <rdf:type rdf:resource="&events;representation"/>
+        <rdfs:label xml:lang="lt">Atstovavimas1</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">Atstovavimas1</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">Atstovavimas1
+
+</ann:label_lt>
+        <events:is_representation_of__organization rdf:resource="http://semantika.lt/ns/Agents1#Tėvynės_sąjunga-Lietuvos_krikščionys_demokratai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#Atstovavimas2 -->
+
+    <owl:NamedIndividual rdf:about="&events;Atstovavimas2">
+        <rdf:type rdf:resource="&events;representation"/>
+        <rdfs:label xml:lang="lt">Atstovavimas2</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">Atstovavimas2</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">Atstovavimas2</ann:label_lt>
+        <events:is_representation_of__organization rdf:resource="http://semantika.lt/ns/Agents1#Chevron"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#Atstovavimas3 -->
+
+    <owl:NamedIndividual rdf:about="&events;Atstovavimas3">
+        <rdf:type rdf:resource="&events;representation"/>
+        <rdfs:label xml:lang="lt">Atstovavimas3</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">Atstovavimas3</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">Atstovavimas3</ann:label_lt>
+        <events:is_representation_of__organization rdf:resource="http://semantika.lt/ns/Agents1#Chevron"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#Dalia_Grybauskaite__eina__prezidentes_pareigas -->
+
+    <owl:NamedIndividual rdf:about="&events;Dalia_Grybauskaite__eina__prezidentes_pareigas">
+        <rdf:type rdf:resource="&events;position_held"/>
+        <rdfs:label xml:lang="lt">Dalia Grybauskaitė eina prezidentės pareigas</rdfs:label>
+        <ann:label_lt xml:lang="lt">Dalia Grybauskaitė eina prezidentės pareigas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">Dalia_Grybauskaitė__eina__prezidentės_pareigas</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#Suskystintos_dujos -->
+
+    <owl:NamedIndividual rdf:about="&events;Suskystintos_dujos">
+        <rdf:type rdf:resource="&agents;corporation"/>
+        <rdfs:label xml:lang="lt">suskystintos dujos</rdfs:label>
+        <ann:label_lt xml:lang="lt">suskystintos dujos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">suskystintos_dujos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#galimybes -->
+
+    <owl:NamedIndividual rdf:about="&events;galimybes">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">galimybės</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">galimybės</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">galimybės</ann:label_lt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events1#Andrius_Kubilius__eina__premjero_pareigas -->
+
+    <owl:NamedIndividual rdf:about="&events1;Andrius_Kubilius__eina__premjero_pareigas">
+        <rdf:type rdf:resource="&events;position_held"/>
+        <rdfs:label xml:lang="lt">eina</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events1#Daiva_Ulbinaite_eina_patarejo_pareigas -->
+
+    <owl:NamedIndividual rdf:about="&events1;Daiva_Ulbinaite_eina_patarejo_pareigas">
+        <rdf:type rdf:resource="&events;position_held"/>
+        <rdfs:comment xml:lang="lt">Daiva Ulbinaite eina patarėjo pareigas</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events1#energetiniai_resursai -->
+
+    <owl:NamedIndividual rdf:about="&events1;energetiniai_resursai">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">energetiniai resursai</rdfs:label>
+        <ann:label_lt xml:lang="lt">energetiniai resursai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">energetiniai_resursai</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Events1#gamtiniai_istekliai -->
+
+    <owl:NamedIndividual rdf:about="&events1;gamtiniai_istekliai">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">gamtiniai ištekliai</rdfs:label>
+        <ann:label_lt xml:lang="lt">gamtiniai ištekliai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">gamtiniai_ištekliai</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/SemLT1#dokumentas_1 -->
+
+    <owl:NamedIndividual rdf:about="&semlt1;dokumentas_1">
+        <rdf:type rdf:resource="&semlt;document"/>
+        <rdfs:label xml:lang="lt">dokumentas_1</rdfs:label>
+        <ann:label_lt xml:lang="lt">dokumentas_1</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">dokumentas_1</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/SemLT1#dokumentas_2 -->
+
+    <owl:NamedIndividual rdf:about="&semlt1;dokumentas_2">
+        <rdf:type rdf:resource="&semlt;document"/>
+        <rdfs:label xml:lang="lt">dokumentas_2</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">dokumentas_2</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">dokumentas_2</ann:label_lt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/SemLT1#dokumentas_3 -->
+
+    <owl:NamedIndividual rdf:about="&semlt1;dokumentas_3">
+        <rdf:type rdf:resource="&semlt;document"/>
+        <rdfs:label xml:lang="lt">dokumentas_3</rdfs:label>
+        <ann:label_lt xml:lang="lt">dokumentas_3</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">dokumentas_3</ann:label_sbvr>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nforce.view.ToolbarPresenter">
+   <children>
+      <HBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+         <children>
+            <ToolBar fx:id="controlsToolBar" prefHeight="40.0" HBox.hgrow="ALWAYS">
+              <items></items>
+            </ToolBar>
+            <ToolBar fx:id="loginToolBar" prefHeight="40.0" HBox.hgrow="NEVER" >
+			  <items></items>
+			</ToolBar>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

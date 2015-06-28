@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.nforce.view.SettingsPresenter">
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="200.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="300.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="30.0" prefHeight="30.0" />
+      <RowConstraints minHeight="30.0" prefHeight="30.0" />
+      <RowConstraints minHeight="30.0" prefHeight="30.0" />
+      <RowConstraints minHeight="30.0" prefHeight="30.0" />
+      <RowConstraints minHeight="30.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <Label text="Pašto serverio adresas (SMTP)" />
+      <Label text="Pašto vartotojo vardas" GridPane.rowIndex="1" />
+      <Label text="Pašto slaptažodis" GridPane.rowIndex="2" />
+      <Label text="Laiško siuntėjo adresas" GridPane.rowIndex="3" />
+      <Label text="Laiško siuntėjo pavadinimas" GridPane.rowIndex="4" />
+      <TextField fx:id="smtpHostField" GridPane.columnIndex="1" />
+      <TextField fx:id="smtpUserField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <PasswordField fx:id="smtpPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="smtpFromField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="smtpFromNameField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   </children>
+</GridPane>

@@ -1,0 +1,846 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://semantika.lt/ns/Time#" >
+    <!ENTITY semlt "http://semantika.lt/ns/SemLT#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY locations "http://semantika.lt/ns/Locations#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY locations1 "http://semantika.lt/ns/Locations1#" >
+    <!ENTITY ann "http://semantika.lt/ns/Annotations#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://semantika.lt/ns/Locations1#"
+     xml:base="http://semantika.lt/ns/Locations1"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:locations1="http://semantika.lt/ns/Locations1#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:time="http://semantika.lt/ns/Time#"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:locations="http://semantika.lt/ns/Locations#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ann="http://semantika.lt/ns/Annotations#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Locations1">
+        <owl:imports rdf:resource="http://semantika.lt/ns/Locations"/>
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Locations1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Afrika -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Afrika">
+        <rdf:type rdf:resource="&locations;continent"/>
+        <rdfs:label xml:lang="lt">Afrika</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Airija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Airija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Airija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Alaušas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Alaušas">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Alaušas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Amazonė -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Amazonė">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Amazonė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Amūras -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Amūras">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Amūras</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Antarktida -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Antarktida">
+        <rdf:type rdf:resource="&locations;continent"/>
+        <rdfs:label xml:lang="lt">Antarktida</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Arties_vandenynas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Arties_vandenynas">
+        <rdf:type rdf:resource="&locations;ocean"/>
+        <rdfs:label xml:lang="lt">Arkties vandenynas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Atlanto_vandenynas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Atlanto_vandenynas">
+        <rdf:type rdf:resource="&locations;ocean"/>
+        <rdfs:label xml:lang="lt">Atlanto vandenynas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Australija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Australija">
+        <rdf:type rdf:resource="&locations;continent"/>
+        <rdfs:label xml:lang="lt">Australija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Avilys -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Avilys">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Avilys</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Azija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Azija">
+        <rdf:type rdf:resource="&locations;continent"/>
+        <rdfs:label xml:lang="lt">Azija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Baltijos_jura -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Baltijos_jura">
+        <rdf:type rdf:resource="&locations;sea"/>
+        <rdfs:label xml:lang="lt">Baltijos jūra</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Briuselis -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Briuselis">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Briuselis</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Didžioji_Britanija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Didžioji_Britanija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Didžioji Britanija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Dnestras -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Dnestras">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Dnesas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Dniepras -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Dniepras">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Dniepras</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Donas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Donas">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Donas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Drūkšiai -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Drūkšiai">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Drūkščiai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Dubysa -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Dubysa">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Dubysa</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Dunojus -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Dunojus">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Dunojus</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Dusia -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Dusia">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Dusia</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Dysnai -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Dysnai">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Dysnai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Egėjo_jūra -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Egėjo_jūra">
+        <rdf:type rdf:resource="&locations;sea"/>
+        <rdfs:label xml:lang="lt">Egėjo jūra</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Elbė -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Elbė">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Elbė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Euroazija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Euroazija">
+        <rdf:type rdf:resource="&locations;location_other"/>
+        <rdfs:label xml:lang="lt">Euroazija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Europa -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Europa">
+        <rdf:type rdf:resource="&locations;continent"/>
+        <rdfs:label xml:lang="lt">Europa</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Geltoniji_upė -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Geltoniji_upė">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Geltonoji upė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Indijos_vandenynas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Indijos_vandenynas">
+        <rdf:type rdf:resource="&locations;ocean"/>
+        <rdfs:label xml:lang="lt">Indijos vandenynas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Irtyšius -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Irtyšius">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Irtyšius</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Ispanija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Ispanija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Ispanija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Italija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Italija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Italija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#JAV -->
+
+    <owl:NamedIndividual rdf:about="&locations1;JAV">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Jungtinės Amerikos Valstijos</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Jangdzė -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Jangdzė">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Jangdzė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Jenisėjus -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Jenisėjus">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Janisėjus</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Juodoji_jūra -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Juodoji_jūra">
+        <rdf:type rdf:resource="&locations;sea"/>
+        <rdfs:label xml:lang="lt">Juodoji jūra</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Kalifornija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Kalifornija">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Kalifornija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Kaliningradas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Kaliningradas">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Kaliningradas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Kanada -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Kanada">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Kanada</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Kaunas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Kaunas">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Kaunas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Kinija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Kinija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Kinija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Klaipėda -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Klaipėda">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Klaipėda</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Kongas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Kongas">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Kongas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Kybartai -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Kybartai">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Kybartai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Latvija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Latvija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Latvija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Lena -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Lena">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Lena</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Lenkija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Lenkija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Lenkija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Lietuva -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Lietuva">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Lietuva</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Londonas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Londonas">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Londonas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Luodis -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Luodis">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Luodis</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Metelys -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Metelys">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Metelys</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Misisipė -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Misisipė">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Misisipė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Nemunas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Nemunas">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Nemunas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Neris -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Neris">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Neris</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Nevėžis -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Nevėžis">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Nevėžis</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Nilas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Nilas">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Nilas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Paryžius -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Paryžius">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Paryžius</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Pečiora -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Pečiora">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Pečiora</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Pietų_Amerika -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Pietų_Amerika">
+        <rdf:type rdf:resource="&locations;continent"/>
+        <rdfs:label xml:lang="lt">Pietų Amerika</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Platelių_ežeras -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Platelių_ežeras">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Platelių ežeras</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Portugalija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Portugalija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Portugalija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Prancūzija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Prancūzija">
+        <rdf:type rdf:resource="&locations;country"/>
+        <rdfs:label xml:lang="lt">Prancūzija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Ramusis_vandenynas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Ramusis_vandenynas">
+        <rdf:type rdf:resource="&locations;ocean"/>
+        <rdfs:label xml:lang="lt">Ramusis vandenynas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Reinas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Reinas">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Reinas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Rėkyvos_ežeras -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Rėkyvos_ežeras">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Rėkyvos ežeras</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Sartai -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Sartai">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Sartai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Suvalkija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Suvalkija">
+        <rdf:type rdf:resource="&locations;location_other"/>
+        <rdfs:label xml:lang="lt">Suvalkija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Uralas -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Uralas">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Uralas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Vakarų_Europa -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Vakarų_Europa">
+        <rdf:type rdf:resource="&locations;location_other"/>
+        <rdfs:label xml:lang="lt">Vakarų Europa</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Venta -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Venta">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Venta</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Vidurzemio_jura -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Vidurzemio_jura">
+        <rdf:type rdf:resource="&locations;sea"/>
+        <rdfs:label xml:lang="lt">Viduržemio jūra</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Vilnius -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Vilnius">
+        <rdf:type rdf:resource="&locations;city"/>
+        <rdfs:label xml:lang="lt">Vilnius</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Vištytis -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Vištytis">
+        <rdf:type rdf:resource="&locations;lake"/>
+        <rdfs:label xml:lang="lt">Vištytis</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Volga -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Volga">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Volga</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Šešupė -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Šešupė">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Šešupė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Šiaurės_Amerika -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Šiaurės_Amerika">
+        <rdf:type rdf:resource="&locations;continent"/>
+        <rdfs:label xml:lang="lt">Šiaurės Amerika</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Šiaurės_Dvina -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Šiaurės_Dvina">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Šiaurės Dvina</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Šiaurės_jūra -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Šiaurės_jūra">
+        <rdf:type rdf:resource="&locations;sea"/>
+        <rdfs:label xml:lang="lt">Šiaurės_jūra</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Šventoji -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Šventoji">
+        <rdf:type rdf:resource="&locations;river"/>
+        <rdfs:label xml:lang="lt">Šventoji</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations1#Žemaitija -->
+
+    <owl:NamedIndividual rdf:about="&locations1;Žemaitija">
+        <rdf:type rdf:resource="&locations;location_other"/>
+        <rdfs:label xml:lang="lt">Žemaitija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">trusted</semlt:trusted>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

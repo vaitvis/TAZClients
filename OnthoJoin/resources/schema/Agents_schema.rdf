@@ -1,0 +1,806 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://semantika.lt/ns/Time#" >
+    <!ENTITY semlt "http://semantika.lt/ns/SemLT#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY agents "http://semantika.lt/ns/Agents#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ann "http://semantika.lt/ns/Annotations#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://semantika.lt/ns/Agents#"
+     xml:base="http://semantika.lt/ns/Agents"
+     xmlns:ann="http://semantika.lt/ns/Annotations#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:agents="http://semantika.lt/ns/Agents#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:time="http://semantika.lt/ns/Time#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Agents">
+        <terms:created rdf:datatype="&xsd;dateTime">2014-01-31T00:00:00</terms:created>
+        <terms:modified rdf:datatype="&xsd;dateTime">2014-07-07T00:00:00</terms:modified>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;anyURI">http://semantika.lt/ns/Agents</vann:preferredNamespaceUri>
+        <terms:relation rdf:datatype="&xsd;anyURI">http://semantika.lt/rules/Agentai</terms:relation>
+        <terms:relation rdf:datatype="&xsd;anyURI">http://semantika.lt/voc/Agentai</terms:relation>
+        <ann:example rdf:datatype="&xsd;anyURI">http://www.semantika.lt/ontology/Agents_egz1.rdf</ann:example>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.semantika.lt/ontology/Agents_schema.rdf</rdfs:isDefinedBy>
+        <vann:preferredNamespacePrefix>agents</vann:preferredNamespacePrefix>
+        <owl:versionInfo>Version 2.1</owl:versionInfo>
+        <terms:title xml:lang="en">Agents Ontology</terms:title>
+        <terms:title xml:lang="lt">Agentų ontologija</terms:title>
+        <rdfs:comment xml:lang="lt">Agentų ontologija naujoje versijoje papildyta anotacijomis.</rdfs:comment>
+        <terms:description xml:lang="lt">Agentų ontologija skirta aprašyti asmenų, organizacijų klases ir sąryšius tarp jų.</terms:description>
+        <ann:subjectField xml:lang="lt">Agentų specialioji sritis</ann:subjectField>
+        <terms:rightsHolder xml:lang="lt">KTU, ISK</terms:rightsHolder>
+        <ann:creationMethod xml:lang="lt">Ontologija sukurta ontologijų kūrimo įrankiu Protege</ann:creationMethod>
+        <terms:publisher xml:lang="lt">Semantika.lt</terms:publisher>
+        <terms:audience xml:lang="lt">Semantikos bendruomenei</terms:audience>
+        <terms:creator xml:lang="lt">UAB Sekasoft</terms:creator>
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Agents"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/SemLT"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#belongs_to__group -->
+
+    <owl:ObjectProperty rdf:about="&agents;belongs_to__group">
+        <rdfs:label xml:lang="lt">agentas priklauso grupei</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">agentas priklauso grupei</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">agentas priklauso grupei</ann:label_lt>
+        <rdfs:domain rdf:resource="&agents;agent"/>
+        <rdfs:range rdf:resource="&agents;group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#has__organization_type -->
+
+    <owl:ObjectProperty rdf:about="&agents;has__organization_type">
+        <rdfs:label xml:lang="lt">organizacija turi organizacijos tipą</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">organizacija turi organizacijos_tipą</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">organizacija turi organizaicjos tipą</ann:label_lt>
+        <rdfs:domain rdf:resource="&agents;organization"/>
+        <rdfs:range rdf:resource="&agents;organization_type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#has__profession_group_type -->
+
+    <owl:ObjectProperty rdf:about="&agents;has__profession_group_type">
+        <rdfs:label xml:lang="lt">profesijų grupė turi profesijų grupės tipą</rdfs:label>
+        <ann:label_lt xml:lang="lt">profesijų grupė turi profesijų grupės tipą</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">profesijų_grupė turi profesijų_grupės_tipą</ann:label_sbvr>
+        <rdfs:domain rdf:resource="&agents;profession_group"/>
+        <rdfs:range rdf:resource="&agents;profession_group_type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#is_similar_to -->
+
+    <owl:ObjectProperty rdf:about="&agents;is_similar_to"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#agent -->
+
+    <owl:Class rdf:about="&agents;agent">
+        <rdfs:label xml:lang="lt">agentas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_sbvr xml:lang="lt">agentas</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">agentas</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#agent_other -->
+
+    <owl:Class rdf:about="&agents;agent_other">
+        <rdfs:label xml:lang="lt">kitas agentas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;agent"/>
+        <ann:label_lt xml:lang="lt">kitas agentas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">kitas_agentas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#artists -->
+
+    <owl:Class rdf:about="&agents;artists">
+        <rdfs:label xml:lang="lt">menininkai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;artists_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_lt xml:lang="lt">menininkai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">menininkai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#bank -->
+
+    <owl:Class rdf:about="&agents;bank">
+        <rdfs:label xml:lang="lt">bankai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;bank_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;organization"/>
+        <ann:label_lt xml:lang="lt">bankai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">bankai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#corporation -->
+
+    <owl:Class rdf:about="&agents;corporation">
+        <rdfs:label xml:lang="lt">korporacija</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;corporation_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;organization"/>
+        <ann:label_sbvr xml:lang="lt">korporacija</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">korporacija</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#educational_institution -->
+
+    <owl:Class rdf:about="&agents;educational_institution">
+        <rdfs:label xml:lang="lt">švietimo įstaigos</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;educational_institution_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;organization"/>
+        <ann:label_lt xml:lang="lt">švietimo įstaigos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">švietimo_įstaigos</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#educators -->
+
+    <owl:Class rdf:about="&agents;educators">
+        <rdfs:label xml:lang="lt">švietimo įstaigos darbuotojai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;educators_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_lt xml:lang="lt">švietimo įstaigos darbuotojai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">švietimo_įstaigos_darbuotojai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#government -->
+
+    <owl:Class rdf:about="&agents;government">
+        <rdfs:label xml:lang="lt">vyriausybė</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;political_organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;government_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;political_organization"/>
+        <ann:label_lt xml:lang="lt">vyriausybė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">vyriausybė</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#group -->
+
+    <owl:Class rdf:about="&agents;group">
+        <rdfs:label xml:lang="lt">grupė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;agent"/>
+        <ann:label_sbvr xml:lang="lt">grupė</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">grupė</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#lawyers -->
+
+    <owl:Class rdf:about="&agents;lawyers">
+        <rdfs:label xml:lang="lt">teisininkai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;lawyers_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_sbvr xml:lang="lt">teisininkai</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">teisininkai</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#media -->
+
+    <owl:Class rdf:about="&agents;media">
+        <rdfs:label xml:lang="lt">žiniasklaida</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;media_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;organization"/>
+        <ann:label_lt xml:lang="lt">žiniasklaida</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">žiniasklaida</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#media_men -->
+
+    <owl:Class rdf:about="&agents;media_men">
+        <rdfs:label xml:lang="lt">žiniasklaidos darbuotojai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;media_men_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_lt xml:lang="lt">žiniasklaidos darbuotojai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">žiniasklaidos_darbuotojai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#medical_office -->
+
+    <owl:Class rdf:about="&agents;medical_office">
+        <rdfs:label xml:lang="lt">medicininė įstaiga</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;medical_office_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;organization"/>
+        <ann:label_lt xml:lang="lt">medicininė įstaiga</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">medicininė_įstaiga</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#medicals -->
+
+    <owl:Class rdf:about="&agents;medicals">
+        <rdfs:label xml:lang="lt">medikai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;medicals_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_lt xml:lang="lt">medikai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">medikai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#officeholders -->
+
+    <owl:Class rdf:about="&agents;officeholders">
+        <rdfs:label xml:lang="lt">pareigūnai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;officeholders_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_sbvr xml:lang="lt">pareigūnai</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">pareigūnai</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#organization -->
+
+    <owl:Class rdf:about="&agents;organization">
+        <rdfs:label xml:lang="lt">organizacija</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;agent"/>
+        <ann:label_sbvr xml:lang="lt">organizacija</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">organizacija</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#organization_other -->
+
+    <owl:Class rdf:about="&agents;organization_other">
+        <rdfs:label xml:lang="lt">kita organizacija</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;organization"/>
+        <ann:label_lt xml:lang="lt">kita organizacija</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">kita_organizacija</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#organization_type -->
+
+    <owl:Class rdf:about="&agents;organization_type">
+        <rdfs:label xml:lang="lt">organizacijos tipai
+</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">organizacijos tipai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">organizacijos_tipai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#person -->
+
+    <owl:Class rdf:about="&agents;person">
+        <rdfs:label xml:lang="lt">asmuo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;agent"/>
+        <ann:label_lt xml:lang="lt">asmuo</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">asmuo</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#political_organization -->
+
+    <owl:Class rdf:about="&agents;political_organization">
+        <rdfs:label xml:lang="lt">politinė organizacija</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;organization"/>
+        <ann:label_lt xml:lang="lt">politinė organizacija</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">politinė_organizacija</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#political_organization_other -->
+
+    <owl:Class rdf:about="&agents;political_organization_other">
+        <rdfs:label xml:lang="lt">kita politinė organizacija</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;political_organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;political_organization_other_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;political_organization"/>
+        <ann:label_lt xml:lang="lt">kita politinė organizacija</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">kita_politinė_organizacija</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#political_party -->
+
+    <owl:Class rdf:about="&agents;political_party">
+        <rdfs:label xml:lang="lt">politinė partija</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;political_organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__organization_type"/>
+                        <owl:hasValue rdf:resource="&agents;political_party_organizations"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;political_organization"/>
+        <ann:label_lt xml:lang="lt">politinė partija</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">politinė_partija</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#politicians -->
+
+    <owl:Class rdf:about="&agents;politicians">
+        <rdfs:label xml:lang="lt">politikai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;politicians_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_sbvr xml:lang="lt">politikai</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">politikai</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#position -->
+
+    <owl:Class rdf:about="&agents;position">
+        <rdfs:label xml:lang="lt">pozicija</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_sbvr xml:lang="lt">pozicija</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">pozicija</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#profession_group -->
+
+    <owl:Class rdf:about="&agents;profession_group">
+        <rdfs:label xml:lang="lt">profesinė grupė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;group"/>
+        <ann:label_lt xml:lang="lt">profesinė grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">profesinė_grupė</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#profession_group_type -->
+
+    <owl:Class rdf:about="&agents;profession_group_type">
+        <rdfs:label xml:lang="lt">profesinių grupių tipai</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">profesinių grupių tipai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">profesinių_grupių_tipai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#scientists -->
+
+    <owl:Class rdf:about="&agents;scientists">
+        <rdfs:label xml:lang="lt">mokslininkai</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&agents;profession_group"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&agents;has__profession_group_type"/>
+                        <owl:hasValue rdf:resource="&agents;scientists_group"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&agents;profession_group"/>
+        <ann:label_lt xml:lang="lt">mokslininkai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">mokslininkai</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#social_group -->
+
+    <owl:Class rdf:about="&agents;social_group">
+        <rdfs:label xml:lang="lt">socialinė grupė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&agents;group"/>
+        <ann:label_lt xml:lang="lt">socialinė grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">socialinė_grupė</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/SemLT#object_other -->
+
+    <owl:Class rdf:about="&semlt;object_other">
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#artists_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;artists_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">menininkų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">menininkų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">menininkų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#bank_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;bank_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">bankų organizacijos</rdfs:label>
+        <ann:label_lt xml:lang="lt">bankų organizacijos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">bankų_organizacijos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#corporation_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;corporation_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">korporacinės organizacijos</rdfs:label>
+        <ann:label_lt xml:lang="lt">korporacinės organizacijos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">korporacinės_organizacijos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#educational_institution_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;educational_institution_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">švietimo įstaigų organizacijos</rdfs:label>
+        <ann:label_lt xml:lang="lt">švietimo įstaigų organizacijos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">švietimo_įstaigų_organizacijos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#educators_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;educators_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">švietimo įstaigų darbuotuotojų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">švietimo įstaigų darbuotuotojų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">švietimo_įstaigų_darbuotuotojų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#government_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;government_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">vyriausybinės organizacijos</rdfs:label>
+        <ann:label_lt xml:lang="lt">vyriausybinės organizacijos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">vyriausybinės_organizacijos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#lawyers_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;lawyers_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">teisininkų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">teisininkų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">teisininkų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#media_men_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;media_men_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">žiniasklaidos darbuotojų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">žiniasklaidos darbuotojų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">žiniasklaidos_darbuotojų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#media_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;media_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">žiniasklaidos organizacijos</rdfs:label>
+        <ann:label_lt xml:lang="lt">žiniasklaidos organizacijos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">žiniasklaidos_organizacijos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#medical_office_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;medical_office_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">medicinių įstaigų organizacijos</rdfs:label>
+        <ann:label_lt xml:lang="lt">medicinių įstaigų organizacijos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">medicinių_įstaigų_organizacijos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#medicals_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;medicals_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">medikų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">medikų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">medikų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#officeholders_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;officeholders_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">pareigūnų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">pareigūnų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">pareigūnų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#political_organization_other_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;political_organization_other_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">kitų politinių organizacijų organizacijos</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">kitų politinių organizacijų organizacijos</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">kitų politinių organizacijų organizacijos</ann:label_lt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#political_party_organizations -->
+
+    <owl:NamedIndividual rdf:about="&agents;political_party_organizations">
+        <rdf:type rdf:resource="&agents;organization_type"/>
+        <rdfs:label xml:lang="lt">politinių partijų organizacijos</rdfs:label>
+        <ann:label_lt xml:lang="lt">politinių partijų organizacijos</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">politinių_partijų_organizacijos</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#politicians_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;politicians_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">politikų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">politikų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">politikų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#scientists_group -->
+
+    <owl:NamedIndividual rdf:about="&agents;scientists_group">
+        <rdf:type rdf:resource="&agents;profession_group_type"/>
+        <rdfs:label xml:lang="lt">mokslininkų grupė</rdfs:label>
+        <ann:label_lt xml:lang="lt">mokslininkų grupė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">mokslininkų_grupė</ann:label_sbvr>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

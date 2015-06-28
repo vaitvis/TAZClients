@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://semantika.lt/ns/Time#" >
+    <!ENTITY semlt "http://semantika.lt/ns/SemLT#" >
+    <!ENTITY agents "http://semantika.lt/ns/Agents#" >
+    <!ENTITY events "http://semantika.lt/ns/Events#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY products "http://semantika.lt/ns/Products#" >
+    <!ENTITY locations "http://semantika.lt/ns/Locations#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ann "http://semantika.lt/ns/Annotations#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY mu "http://semantika.lt/ns/MeasurementUnits#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://semantika.lt/ns/Products#"
+     xml:base="http://semantika.lt/ns/Products"
+     xmlns:events="http://semantika.lt/ns/Events#"
+     xmlns:agents="http://semantika.lt/ns/Agents#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:mu="http://semantika.lt/ns/MeasurementUnits#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://semantika.lt/ns/Time#"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:locations="http://semantika.lt/ns/Locations#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ann="http://semantika.lt/ns/Annotations#"
+     xmlns:products="http://semantika.lt/ns/Products#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Products">
+        <terms:created rdf:datatype="&xsd;dateTime">2014-01-31T00:00:00</terms:created>
+        <terms:modified rdf:datatype="&xsd;dateTime">2014-07-07T00:00:00</terms:modified>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;anyURI">http://semantika.lt/ns/Products</vann:preferredNamespaceUri>
+        <terms:relation rdf:datatype="&xsd;anyURI">http://semantika.lt/rules/Produktai</terms:relation>
+        <terms:relation rdf:datatype="&xsd;anyURI">http://semantika.lt/voc/Produktai</terms:relation>
+        <ann:example rdf:datatype="&xsd;anyURI">http://www.semantika.lt/ontology/Products_egz1.rdf</ann:example>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.semantika.lt/ontology/Products_schema.rdf</rdfs:isDefinedBy>
+        <terms:title xml:lang="en">Products Ontology</terms:title>
+        <terms:rightsHolder xml:lang="lt">KTU, ISK</terms:rightsHolder>
+        <ann:creationMethod xml:lang="lt">Ontologija sukurta naudojasntis ontologijų kūrimo įrankiu Protege.</ann:creationMethod>
+        <terms:title xml:lang="lt">Produktų ontologija</terms:title>
+        <rdfs:comment xml:lang="lt">Produktų ontologija naujoje versijoje papildyta anotacijomis.</rdfs:comment>
+        <terms:publisher xml:lang="lt">Semantika.lt</terms:publisher>
+        <vann:preferredNamespacePrefix>products</vann:preferredNamespacePrefix>
+        <terms:description xml:lang="lt">Produktų ontologija skirta aprašyti prekių ir paslaugų klases ir sąryšius tarp jų.</terms:description>
+        <terms:creator xml:lang="lt">UAB Sekasoft</terms:creator>
+        <owl:versionInfo>Version 2.1</owl:versionInfo>
+        <terms:audience xml:lang="lt">Semantikos bendruomenė</terms:audience>
+        <ann:subjectField xml:lang="lt">Specialioji verslo ir ekonomikos sritis</ann:subjectField>
+        <owl:imports rdf:resource="http://semantika.lt/ns/Events"/>
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Products"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Annotations#label_lt -->
+
+    <owl:AnnotationProperty rdf:about="&ann;label_lt"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Annotations#label_sbvr -->
+
+    <owl:AnnotationProperty rdf:about="&ann;label_sbvr"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Events#has__position_held -->
+
+    <owl:ObjectProperty rdf:about="&events;has__position_held"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#occurs_at__time_moment -->
+
+    <owl:ObjectProperty rdf:about="&events;occurs_at__time_moment"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#occurs_in__location -->
+
+    <owl:ObjectProperty rdf:about="&events;occurs_in__location"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#participated_in__event -->
+
+    <owl:ObjectProperty rdf:about="&events;participated_in__event"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#participation_in__event -->
+
+    <owl:ObjectProperty rdf:about="&events;participation_in__event"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#related_with__event_object -->
+
+    <owl:ObjectProperty rdf:about="&events;related_with__event_object"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#related_with__position -->
+
+    <owl:ObjectProperty rdf:about="&events;related_with__position"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#acquired_by_agent -->
+
+    <owl:ObjectProperty rdf:about="&products;acquired_by_agent">
+        <rdfs:label xml:lang="lt">produktą įsigijo agentas</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">produktą įsigijo agentas</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">produktą įsigijo agentas</ann:label_lt>
+        <rdfs:range rdf:resource="&agents;agent"/>
+        <rdfs:domain rdf:resource="&products;product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#acquired_product -->
+
+    <owl:ObjectProperty rdf:about="&products;acquired_product">
+        <rdfs:label xml:lang="lt">agentas įsigijo produktą</rdfs:label>
+        <ann:label_sbvr xml:lang="lt">agentas įsigijo produktą</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">agentas įsigijo produktą</ann:label_lt>
+        <rdfs:domain rdf:resource="&agents;agent"/>
+        <owl:inverseOf rdf:resource="&products;acquired_by_agent"/>
+        <rdfs:range rdf:resource="&products;product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#expressed_demand -->
+
+    <owl:ObjectProperty rdf:about="&products;expressed_demand">
+        <rdfs:label xml:lang="lt">agentas pareiškė poreikį </rdfs:label>
+        <ann:label_sbvr xml:lang="lt">agentas pareiškė poreikį </ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">agentas pareiškė poreikį </ann:label_lt>
+        <rdfs:domain rdf:resource="&agents;agent"/>
+        <rdfs:range rdf:resource="&products;demand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#has_product_classification -->
+
+    <owl:ObjectProperty rdf:about="&products;has_product_classification">
+        <rdfs:label xml:lang="lt">produkto tipas priklauso produktų klasifikacijai</rdfs:label>
+        <ann:label_lt xml:lang="lt">produkto tipas priklauso produktų klasifikacijai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">produkto_tipas priklauso produktų_klasifikacijai</ann:label_sbvr>
+        <rdfs:range rdf:resource="&products;product_classification"/>
+        <rdfs:domain rdf:resource="&products;product_type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#has_trademark -->
+
+    <owl:ObjectProperty rdf:about="&products;has_trademark">
+        <rdfs:label xml:lang="lt">organizacija turi prekinį ženklą</rdfs:label>
+        <ann:label_lt xml:lang="lt">organizacija turi prekinį ženklą</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">organizacija turi prekinį_ženklą</ann:label_sbvr>
+        <rdfs:domain rdf:resource="&agents;organization"/>
+        <rdfs:range rdf:resource="&products;trademark"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#is_classified_as_product_type -->
+
+    <owl:ObjectProperty rdf:about="&products;is_classified_as_product_type">
+        <rdfs:label xml:lang="lt">produktas klasifikuojamas kaip produkto tipas</rdfs:label>
+        <ann:label_lt xml:lang="lt">produktas klasifikuojamas kaip produkto tipas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">produktas klasifikuojamas_kaip produkto_tipas</ann:label_sbvr>
+        <rdfs:domain rdf:resource="&products;product"/>
+        <rdfs:range rdf:resource="&products;product_type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#is_marked_with_trademark -->
+
+    <owl:ObjectProperty rdf:about="&products;is_marked_with_trademark">
+        <rdfs:label xml:lang="lt">produktas pažymėtas prekiniu ženklu</rdfs:label>
+        <ann:label_lt xml:lang="lt">produktas pažymėtas prekiniu ženklu</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">produktas pažymėtas prekiniu_ženklu</ann:label_sbvr>
+        <rdfs:domain rdf:resource="&products;product"/>
+        <rdfs:range rdf:resource="&products;trademark"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#is_trademark_of_maker -->
+
+    <owl:ObjectProperty rdf:about="&products;is_trademark_of_maker">
+        <rdfs:label xml:lang="lt">prekinis ženklas priklauso organizacijai</rdfs:label>
+        <ann:label_lt xml:lang="lt">prekinis ženklas priklauso organizacijai</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">prekinis_ženklas priklauso organizacijai</ann:label_sbvr>
+        <rdfs:range rdf:resource="&agents;organization"/>
+        <owl:inverseOf rdf:resource="&products;has_trademark"/>
+        <rdfs:domain rdf:resource="&products;trademark"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#seeks_product -->
+
+    <owl:ObjectProperty rdf:about="&products;seeks_product">
+        <rdfs:label xml:lang="lt">agentas ieško produkto</rdfs:label>
+        <ann:label_lt xml:lang="lt">agentas ieško produkto</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">agentas ieško produkto</ann:label_sbvr>
+        <rdfs:domain rdf:resource="&agents;agent"/>
+        <rdfs:range rdf:resource="&products;product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#sought_by_agent -->
+
+    <owl:ObjectProperty rdf:about="&products;sought_by_agent">
+        <rdfs:label xml:lang="lt">produktas ieškomas agento</rdfs:label>
+        <ann:label_lt xml:lang="lt">produktas ieškomas agento</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">produktas ieškomas agento</ann:label_sbvr>
+        <rdfs:range rdf:resource="&agents;agent"/>
+        <rdfs:domain rdf:resource="&products;product"/>
+        <owl:inverseOf rdf:resource="&products;seeks_product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Products#rating_decimal_value -->
+
+    <owl:DatatypeProperty rdf:about="&products;rating_decimal_value">
+        <rdfs:domain rdf:resource="&events;rating"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#rating_integer_value -->
+
+    <owl:DatatypeProperty rdf:about="&products;rating_integer_value">
+        <rdfs:domain rdf:resource="&events;rating"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#rating_string_value -->
+
+    <owl:DatatypeProperty rdf:about="&products;rating_string_value">
+        <rdfs:domain rdf:resource="&events;rating"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#agent -->
+
+    <owl:Class rdf:about="&agents;agent"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#organization -->
+
+    <owl:Class rdf:about="&agents;organization"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#person -->
+
+    <owl:Class rdf:about="&agents;person"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Agents#position -->
+
+    <owl:Class rdf:about="&agents;position"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#event -->
+
+    <owl:Class rdf:about="&events;event"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#event_other -->
+
+    <owl:Class rdf:about="&events;event_other"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#participation -->
+
+    <owl:Class rdf:about="&events;participation"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#position_held -->
+
+    <owl:Class rdf:about="&events;position_held"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Events#representation -->
+
+    <owl:Class rdf:about="&events;representation"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#location -->
+
+    <owl:Class rdf:about="&locations;location"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#acquisition -->
+
+    <owl:Class rdf:about="&products;acquisition">
+        <rdfs:label xml:lang="lt">įsigijimas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&events;event"/>
+        <ann:label_lt xml:lang="lt">įsigijimas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">įsigijimas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#color -->
+
+    <owl:Class rdf:about="&products;color">
+        <rdfs:label xml:lang="lt">spalva</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&products;feature"/>
+        <ann:label_sbvr xml:lang="lt">spalva</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">spalva</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#commodity -->
+
+    <owl:Class rdf:about="&products;commodity">
+        <rdfs:label xml:lang="lt">prekė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&products;product"/>
+        <ann:label_sbvr xml:lang="lt">prekė</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">prekė</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#demand -->
+
+    <owl:Class rdf:about="&products;demand">
+        <rdfs:label xml:lang="lt">paklausa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&events;event"/>
+        <ann:label_lt xml:lang="lt">paklausa</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">paklausa</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#feature -->
+
+    <owl:Class rdf:about="&products;feature">
+        <rdfs:label xml:lang="lt">savybė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">savybė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">savybė</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#model -->
+
+    <owl:Class rdf:about="&products;model">
+        <rdfs:label xml:lang="lt">modelis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">modelis</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">modelis</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#offering -->
+
+    <owl:Class rdf:about="&products;offering">
+        <rdfs:label xml:lang="lt">siūlymas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&events;event"/>
+        <ann:label_sbvr xml:lang="lt">siūlymas</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">siūlymas</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#price -->
+
+    <owl:Class rdf:about="&products;price">
+        <rdfs:label xml:lang="lt">kaina</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&products;feature"/>
+        <ann:label_sbvr xml:lang="lt">kaina</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">kaina</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#product -->
+
+    <owl:Class rdf:about="&products;product">
+        <rdfs:label xml:lang="lt">produktas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_sbvr xml:lang="lt">produktas</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">produktas</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#product_classification -->
+
+    <owl:Class rdf:about="&products;product_classification">
+        <rdfs:label xml:lang="lt">produkto klasifikacija</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">produkto klasifikacija</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">produkto_klasifikacija</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#product_type -->
+
+    <owl:Class rdf:about="&products;product_type">
+        <rdfs:label xml:lang="lt">produkto tipas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">produkto tipas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">produkto_tipas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#sale -->
+
+    <owl:Class rdf:about="&products;sale">
+        <rdfs:label xml:lang="lt">pardavimas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&events;event"/>
+        <ann:label_lt xml:lang="lt">pardavimas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">pardavimas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#service -->
+
+    <owl:Class rdf:about="&products;service">
+        <rdfs:label xml:lang="lt">paslauga</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&products;product"/>
+        <ann:label_sbvr xml:lang="lt">paslauga</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">paslauga</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#trademark -->
+
+    <owl:Class rdf:about="&products;trademark">
+        <rdfs:label xml:lang="lt">prekinis ženklas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">prekinis ženklas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">prekinis_ženklas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Products#warranty -->
+
+    <owl:Class rdf:about="&products;warranty">
+        <rdfs:label xml:lang="lt">garantija</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_sbvr xml:lang="lt">garantija</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">garantija</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/SemLT#object -->
+
+    <owl:Class rdf:about="&semlt;object"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Time#time -->
+
+    <owl:Class rdf:about="&time;time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&locations;has_location">
+        <rdfs:label xml:lang="lt">objektas yra vietovėje</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

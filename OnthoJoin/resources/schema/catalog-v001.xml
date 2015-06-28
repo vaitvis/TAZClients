@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Administrative" uri="Administrative_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Administrative1" uri="Administrative_egz1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Agents" uri="Agents_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Agents1" uri="Agents_egz1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Annotations" uri="Annotations_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Events" uri="Events_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Events1" uri="Events_egz1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Locations" uri="Locations_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Locations1" uri="Locations_egz1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/MeasurementUnits" uri="MeasurementUnits_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/MergedObjects" uri="MergedObjects_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Politics" uri="Politics_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Politics1" uri="Politics_egz1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Products" uri="Products_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Products1" uri="Products_egz1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Ratings" uri="Public_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/SemLT" uri="SemLT_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="http://semantika.lt/ns/Time" uri="Time_schema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="duplicate:http://www.w3.org/2002/07/owl" uri="MeasurementUnits_egz1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1422479376657" name="duplicate:http://www.w3.org/2002/07/owl" uri="SemLT_egz1.rdf"/>
+    </group>
+</catalog>

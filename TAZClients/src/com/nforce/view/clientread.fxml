@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nforce.view.ClientReadPresenter">
+   <children>
+      <GridPane AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" percentWidth="20" />
+          <ColumnConstraints hgrow="ALWAYS" percentWidth="80" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ID" />
+            <Label text="Įmonė" GridPane.rowIndex="1" />
+            <Label text="Įmonės kodas" GridPane.rowIndex="2" />
+            <Label text="Įmonės PVM kodas" GridPane.rowIndex="3" />
+            <Label text="Adresatas" GridPane.rowIndex="4" />
+            <Label text="Adresas" GridPane.rowIndex="5" />
+            <Label text="Telefono numeris" GridPane.rowIndex="6" />
+            <Label text="El. paštas" GridPane.rowIndex="7" />
+            <Label text="Prenumerata nuo" GridPane.rowIndex="8" />
+            <Label text="Prenumerata iki" GridPane.rowIndex="9" />
+            <Label text="Būsena" GridPane.rowIndex="10" />
+            <Label text="Komentaras" GridPane.rowIndex="11" />
+            <Label fx:id="idLabel" GridPane.columnIndex="1" />
+            <Label fx:id="companyTitleField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="companyCodeField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="companyVatCodeField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="addresseeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="validFromField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="validToField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="clientStateField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextArea fx:id="commentsField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>

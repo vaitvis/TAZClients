@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://semantika.lt/ns/Time#" >
+    <!ENTITY semlt "http://semantika.lt/ns/SemLT#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY locations "http://semantika.lt/ns/Locations#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ann "http://semantika.lt/ns/Annotations#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://semantika.lt/ns/Locations#"
+     xml:base="http://semantika.lt/ns/Locations"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:time="http://semantika.lt/ns/Time#"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:locations="http://semantika.lt/ns/Locations#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ann="http://semantika.lt/ns/Annotations#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Locations">
+        <terms:created rdf:datatype="&xsd;dateTime">2014-01-31T00:00:00</terms:created>
+        <terms:modified rdf:datatype="&xsd;dateTime">2014-07-07T00:00:00</terms:modified>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;anyURI">http://semantika.lt/ns/Locations</vann:preferredNamespaceUri>
+        <terms:relation rdf:datatype="&xsd;anyURI">http://semantika.lt/rules/Vietoves</terms:relation>
+        <terms:relation rdf:datatype="&xsd;anyURI">http://semantika.lt/voc/Vietoves</terms:relation>
+        <ann:example rdf:datatype="&xsd;anyURI">http://www.semantika.lt/ontology/Locations_egz1.rdf
+</ann:example>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.semantika.lt/ontology/Locations_schema.rdf</rdfs:isDefinedBy>
+        <owl:versionInfo>Version 2.1</owl:versionInfo>
+        <terms:title xml:lang="en">Locations Ontology</terms:title>
+        <terms:rightsHolder xml:lang="lt">KTU, ISK</terms:rightsHolder>
+        <terms:publisher xml:lang="lt">Semantika.lt</terms:publisher>
+        <terms:audience xml:lang="lt">Semantikos bendruomenė</terms:audience>
+        <terms:creator xml:lang="lt">UAB Sekasoft</terms:creator>
+        <terms:title xml:lang="lt">Vietovių ontologija</terms:title>
+        <rdfs:comment xml:lang="lt">Vietovių ontologija naujoje versijoje papildyta anotacijomis.</rdfs:comment>
+        <terms:description xml:lang="lt">Vietovių ontologija skirta aprašyti vietovių klases ir sąryšius tarp jų.</terms:description>
+        <ann:subjectField xml:lang="lt">Vietovių sritis</ann:subjectField>
+        <vann:preferredNamespacePrefix>locations</vann:preferredNamespacePrefix>
+        <ann:creationMethod xml:lang="lt">Ontologija sukurta naudojanmtis ontologijųkūrimo įrankį Protege.</ann:creationMethod>
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Locations"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/SemLT"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#has__capital -->
+
+    <owl:ObjectProperty rdf:about="&locations;has__capital">
+        <ann:label_lt xml:lang="lt">šalis turi sostinę</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">šalis turi sostinę</ann:label_sbvr>
+        <rdfs:range rdf:resource="&locations;city"/>
+        <rdfs:domain rdf:resource="&locations;country"/>
+        <owl:inverseOf rdf:resource="&locations;is_capital_of__country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#has__location -->
+
+    <owl:ObjectProperty rdf:about="&locations;has__location">
+        <rdfs:label xml:lang="lt">objektas yra vietovėje</rdfs:label>
+        <ann:label_lt xml:lang="lt">objektas yra vietovėje</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">objektas yra vietovėje</ann:label_sbvr>
+        <rdfs:range rdf:resource="&locations;location"/>
+        <rdfs:domain rdf:resource="&semlt;object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#is_capital_of__country -->
+
+    <owl:ObjectProperty rdf:about="&locations;is_capital_of__country">
+        <rdfs:label xml:lang="lt">miestas yra sostinė šalies</rdfs:label>
+        <ann:label_lt xml:lang="lt">miestas yra sostinė šalies</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">miestas yra_sostinė šalies</ann:label_sbvr>
+        <rdfs:domain rdf:resource="&locations;city"/>
+        <rdfs:range rdf:resource="&locations;country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#is_location_of__object -->
+
+    <owl:ObjectProperty rdf:about="&locations;is_location_of__object">
+        <rdfs:label xml:lang="lt">vietovėje yra objektas</rdfs:label>
+        <ann:label_lt xml:lang="lt">vietovėje yra objektas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">vietovėje yra objektas</ann:label_sbvr>
+        <owl:inverseOf rdf:resource="&locations;has__location"/>
+        <rdfs:domain rdf:resource="&locations;location"/>
+        <rdfs:range rdf:resource="&semlt;object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#city -->
+
+    <owl:Class rdf:about="&locations;city">
+        <rdfs:label xml:lang="lt">miestas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;location"/>
+        <ann:label_lt xml:lang="lt">miestas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">miestas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#continent -->
+
+    <owl:Class rdf:about="&locations;continent">
+        <rdfs:label xml:lang="lt">žemynas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;location"/>
+        <ann:label_lt xml:lang="lt">žemynas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">žemynas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#country -->
+
+    <owl:Class rdf:about="&locations;country">
+        <rdfs:label xml:lang="lt">šalis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;location"/>
+        <ann:label_lt xml:lang="lt">šalis</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">šalis</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#lake -->
+
+    <owl:Class rdf:about="&locations;lake">
+        <rdfs:label xml:lang="lt">ežeras</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;water"/>
+        <ann:label_lt xml:lang="lt">ežeras</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">ežeras</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#location -->
+
+    <owl:Class rdf:about="&locations;location">
+        <rdfs:label xml:lang="lt">vietovė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&semlt;object"/>
+        <ann:label_lt xml:lang="lt">vietovė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">vietovė</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#location_other -->
+
+    <owl:Class rdf:about="&locations;location_other">
+        <rdfs:label xml:lang="lt">kita vietovė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;location"/>
+        <ann:label_lt xml:lang="lt">kita vietovė</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">kita_vietovė</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#ocean -->
+
+    <owl:Class rdf:about="&locations;ocean">
+        <rdfs:label xml:lang="lt">vandenynas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;water"/>
+        <ann:label_sbvr xml:lang="lt">vandenynas</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">vandenynas</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#other_water -->
+
+    <owl:Class rdf:about="&locations;other_water">
+        <rdfs:label xml:lang="lt">kitas vandens telkinys</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;water"/>
+        <ann:label_lt xml:lang="lt">kitas vandens telkinys</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">kitas_vandens_telkinys</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#region -->
+
+    <owl:Class rdf:about="&locations;region">
+        <rdfs:label xml:lang="lt">regionas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;location"/>
+        <ann:label_lt xml:lang="lt">regionas</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">regionas</ann:label_sbvr>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#river -->
+
+    <owl:Class rdf:about="&locations;river">
+        <rdfs:label xml:lang="lt">upė</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;water"/>
+        <ann:label_sbvr xml:lang="lt">upė</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">upė</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#sea -->
+
+    <owl:Class rdf:about="&locations;sea">
+        <rdfs:label xml:lang="lt">jūra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;water"/>
+        <ann:label_sbvr xml:lang="lt">jūra</ann:label_sbvr>
+        <ann:label_lt xml:lang="lt">jūra</ann:label_lt>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Locations#water -->
+
+    <owl:Class rdf:about="&locations;water">
+        <rdfs:label xml:lang="lt">vandens telkinys</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&locations;location"/>
+        <ann:label_lt xml:lang="lt">vandens telkinys</ann:label_lt>
+        <ann:label_sbvr xml:lang="lt">vandens_telkinys</ann:label_sbvr>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

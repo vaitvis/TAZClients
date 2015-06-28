@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nforce.view.ClientInlinePresenter">
+   <children>
+      <HBox prefHeight="50" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+         <children>
+            <GridPane HBox.hgrow="NEVER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="idLabel" />
+               </children>
+            </GridPane>
+            <GridPane HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Įmonė">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Įmonės kodas" GridPane.rowIndex="1">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="PVM kodas" GridPane.rowIndex="2">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Adresas" GridPane.columnIndex="2">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tel. nr." GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="El. paštas" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Prenumerata nuo" GridPane.columnIndex="4">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Prenumerata iki" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Būsena" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  	<font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="companyTitleLabel" GridPane.columnIndex="1" />
+                  <Label fx:id="companyCodeLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="companyVatCodeLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="addressLabel" GridPane.columnIndex="3" />
+                  <Label fx:id="phoneNumberLabel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="emailLabel" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="validFromLabel" GridPane.columnIndex="5" />
+                  <Label fx:id="validToLabel" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label fx:id="clientStateLabel" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <VBox spacing="5.0" HBox.hgrow="NEVER">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doRead" text="Peržiūrėti" VBox.vgrow="ALWAYS" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doEdit" text="Redaguoti" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="deleteButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDelete" text="Pašalinti" VBox.vgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

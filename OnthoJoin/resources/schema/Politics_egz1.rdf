@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://semantika.lt/ns/Time#" >
+    <!ENTITY semlt "http://semantika.lt/ns/SemLT#" >
+    <!ENTITY semlt1 "http://semantika.lt/ns/SemLT1#" >
+    <!ENTITY agents "http://semantika.lt/ns/Agents#" >
+    <!ENTITY events "http://semantika.lt/ns/Events#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY agents1 "http://semantika.lt/ns/Agents1#" >
+    <!ENTITY events1 "http://semantika.lt/ns/Events1#" >
+    <!ENTITY politics "http://semantika.lt/ns/Politics#" >
+    <!ENTITY locations "http://semantika.lt/ns/Locations#" >
+    <!ENTITY politics1 "http://semantika.lt/ns/Politics1#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ann "http://semantika.lt/ns/Annotations#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY mu "http://semantika.lt/ns/MeasurementUnits#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://semantika.lt/ns/Politics1#"
+     xml:base="http://semantika.lt/ns/Politics1"
+     xmlns:semlt1="http://semantika.lt/ns/SemLT1#"
+     xmlns:events="http://semantika.lt/ns/Events#"
+     xmlns:agents="http://semantika.lt/ns/Agents#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:mu="http://semantika.lt/ns/MeasurementUnits#"
+     xmlns:politics="http://semantika.lt/ns/Politics#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://semantika.lt/ns/Time#"
+     xmlns:politics1="http://semantika.lt/ns/Politics1#"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:locations="http://semantika.lt/ns/Locations#"
+     xmlns:events1="http://semantika.lt/ns/Events1#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ann="http://semantika.lt/ns/Annotations#"
+     xmlns:agents1="http://semantika.lt/ns/Agents1#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Politics1">
+        <owl:imports rdf:resource="http://semantika.lt/ns/Events1"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/Politics"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Events#is_possition_held_in__organization -->
+
+    <rdf:Description rdf:about="&events;is_possition_held_in__organization">
+        <rdfs:subPropertyOf rdf:resource="&semlt;is_publication_date_of__document"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Agents1#Daiva_Ulbinaite -->
+
+    <rdf:Description rdf:about="&agents1;Daiva_Ulbinaite">
+        <events:occupy__position rdf:resource="&agents1;patarejas"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semantika.lt/ns/Events1#Andrius_Kubilius__eina__premjero_pareigas -->
+
+    <rdf:Description rdf:about="&events1;Andrius_Kubilius__eina__premjero_pareigas">
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">eina pareigas</rdfs:comment>
+        <events:assign__position rdf:resource="&agents1;premjeras"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semantika.lt/ns/Events1#Daiva_Ulbinaite_eina_patarejo_pareigas -->
+
+    <rdf:Description rdf:about="&events1;Daiva_Ulbinaite_eina_patarejo_pareigas">
+        <rdfs:label xml:lang="lt">eina</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:assign__position rdf:resource="&agents1;patarejas"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semantika.lt/ns/Events1#energetiniai_resursai -->
+
+    <owl:NamedIndividual rdf:about="&events1;energetiniai_resursai">
+        <rdfs:label xml:lang="lt">energetiniai resursai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics#event_by_type_other -->
+
+    <owl:NamedIndividual rdf:about="&politics;event_by_type_other"/>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics#prezidente -->
+
+    <owl:NamedIndividual rdf:about="&politics;prezidente">
+        <rdf:type rdf:resource="&agents;position"/>
+        <rdfs:label xml:lang="lt">prezidentė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_recognized_as__actual_object rdf:resource="&agents1;Dalia_Grybauskaite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics#substance -->
+
+    <owl:NamedIndividual rdf:about="&politics;substance">
+        <rdf:type rdf:resource="&events;substance"/>
+        <rdfs:label xml:lang="lt">turinys</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Anot_Grybauskaitės_pilnas -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Anot_Grybauskaitės_pilnas">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">anot</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Anot šalies vadovės, kiekvienai valstybei svarbu žinoti savo gamtinius išteklius, energetinius resursus ir galimybes.</rdfs:comment>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <politics:has__saying_object rdf:resource="&events1;energetiniai_resursai"/>
+        <events:said_in__meeting rdf:resource="&politics1;D_Grybauskiate_susitiko_su_Chevron_atstovais"/>
+        <events:said_by__speaker rdf:resource="&politics1;Dalia_Grybauskaite_1"/>
+        <events:said__substance rdf:resource="&politics1;Grybauskaites_anot_turinys"/>
+        <politics:has__saying_object rdf:resource="&politics1;galimybės"/>
+        <politics:has__saying_object rdf:resource="&politics1;gamtiniai_ištekliai"/>
+        <semlt:is_related_with__object rdf:resource="&politics1;kiekvienai_valstybei_svarbu_žinoti_savo_gamtinius_išteklius,_energetinius_resursus_ir_galimybes."/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Chevron_atstovams -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Chevron_atstovams">
+        <rdf:type rdf:resource="&agents;agent"/>
+        <rdfs:label xml:lang="lt">Chevron atstovai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#D_Grybauskaite_susitiko_su_atstovais_Delfi -->
+
+    <owl:NamedIndividual rdf:about="&politics1;D_Grybauskaite_susitiko_su_atstovais_Delfi">
+        <rdf:type rdf:resource="&politics;meeting"/>
+        <rdfs:label xml:lang="lt">susitiko</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:is_meeting_of__person rdf:resource="&politics1;Dalia_Grybauskaitė_2"/>
+        <events:is_meeting_of__person rdf:resource="&politics1;Jamesas_Johnsonas"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#D_Grybauskiate_susitiko_su_Chevron_atstovais -->
+
+    <owl:NamedIndividual rdf:about="&politics1;D_Grybauskiate_susitiko_su_Chevron_atstovais">
+        <rdf:type rdf:resource="&politics;meeting"/>
+        <rdfs:label xml:lang="lt">susitiko</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:is_meeting_of__person rdf:resource="&politics1;Dalia_Grybauskaite_1"/>
+        <events:is_meeting_of__person rdf:resource="&politics1;Gilbertas_Ankenbaueris_1"/>
+        <events:is_meeting_of__person rdf:resource="&politics1;Jay_Jahnson_1"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#D_Ulbinaite_deste_pilnas -->
+
+    <owl:NamedIndividual rdf:about="&politics1;D_Ulbinaite_deste_pilnas">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">dėstė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment rdf:datatype="&xsd;string">„Prezidentė taip pat susitikime atkreipė ypatingą dėmesį ir pabrėžė „Chevron“ atstovams, kad vykdant skalūninių dujų žvalgybą šalyje turi būti laikomasi visų gamtosauginių reikalavimų, taip pat vykdomas labai aktyvus dialogas su vietos bendruomene ir visos šalies žmonėms pateikiama kaip galima aiškesnė ir suprantamesnė informacija“, - dėstė D. Ulbinaitė.</rdfs:comment>
+        <politics:has__saying_object rdf:resource="&politics;prezidente"/>
+        <events:said_by__speaker rdf:resource="&politics1;D_Ulbinaitė"/>
+        <events:said__substance rdf:resource="&politics1;Grybauskaites_sakymas_Ulbinaites_sakyme_PILNAS_1"/>
+        <events:said__substance rdf:resource="&politics1;Grybauskaites_sakymas_Ulbinaites_sakyme_PILNAS_2"/>
+        <events:said__substance rdf:resource="&politics1;Ulbinaites_destymo_turinys"/>
+        <politics:has__saying_object rdf:resource="&politics1;aiskesne_ir_suprantamesne_informacija"/>
+        <politics:has__saying_object rdf:resource="&politics1;demesi"/>
+        <politics:has__saying_object rdf:resource="&politics1;dialogas"/>
+        <politics:has__saying_object rdf:resource="&politics1;gamtosauginių_reikalavimų"/>
+        <politics:has__saying_object rdf:resource="&politics1;salies_zmones"/>
+        <politics:has__saying_object rdf:resource="&politics1;skaluniniu_duju_zvalgyba"/>
+        <politics:has__saying_object rdf:resource="&politics1;vietos_bendruomene"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#D_Ulbinaite_sake_1 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;D_Ulbinaite_sake_1">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">sakė</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Lietuvos prezidentės patarėja Daiva Ulbinaitė sakė, jog &quot;Chevron&quot; turės laikytis visų aplinkos apsaugos reikalavimų, ieškant skalūnų dujų ar naftos.</rdfs:comment>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:said_by__speaker rdf:resource="&politics1;Daiva_Ulbinaitė_1"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#D_Ulbinaitė -->
+
+    <owl:NamedIndividual rdf:about="&politics1;D_Ulbinaitė">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">D. Ulbinaitė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#D_Ulbinaitė_sake_2 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;D_Ulbinaitė_sake_2">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">sakė</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">&quot;Prezidentė susitikime atkreipė ypatingą dėmesį ir pabrėžė &quot;Chevron&quot; atstovams, kad vykdant skalūnų dujų žvalgybą, šalyje turi būti laikomasi visų gamtosauginių reikalavimų, taip pat vykdomas labai aktyvus dialogas su vietos bendruomene ir visos šalies žmonėms pateikiama kaip galima aiškesnė ir suprantamesnė informacija&quot;, - sakė D.Ulbinaitė.</rdfs:comment>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:said_by__speaker rdf:resource="&politics1;Daiva_Ulbinaitė_1"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Daiva_Ulbinaitė_1 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Daiva_Ulbinaitė_1">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">Daiva Ulbinaitė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Dalia_Grybauskaite_1 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Dalia_Grybauskaite_1">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">Dalia Grybauskaitė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:said__saying rdf:resource="&politics1;Anot_Grybauskaitės_pilnas"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Dalia_Grybauskaite_3 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Dalia_Grybauskaite_3">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">Lietuvos prezidentė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_recognized_as__actual_object rdf:resource="&agents1;Dalia_Grybauskaite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Dalia_Grybauskaitė_2 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Dalia_Grybauskaitė_2">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">D. Grybauskaitė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_recognized_as__actual_object rdf:resource="&agents1;Dalia_Grybauskaite"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Gilbertas_Ankenbaueris_1 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Gilbertas_Ankenbaueris_1">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">G. Ankenbaueris</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_recognized_as__actual_object rdf:resource="&agents1;Gilbertas_Ankenbaueris"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Grybauskaites_anot_turinys -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Grybauskaites_anot_turinys">
+        <rdf:type rdf:resource="&events;substance"/>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">kiekvienai valstybei svarbu žinoti savo gamtinius išteklius, energetinius resursus ir galimybes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Grybauskaites_pabrezimo_Ulbinaites_sakyme_turinys -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Grybauskaites_pabrezimo_Ulbinaites_sakyme_turinys">
+        <rdf:type rdf:resource="&events;substance"/>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">vykdant skalūninių dujų žvalgybą šalyje turi būti laikomasi visų gamtosauginių reikalavimų, taip pat vykdomas labai aktyvus dialogas su vietos bendruomene ir visos šalies žmonėms pateikiama kaip galima aiškesnė ir suprantamesnė informacija</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Grybauskaites_sake_PILNAS -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Grybauskaites_sake_PILNAS">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">sakė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">Lietuva turi žinoti apie savo gelmės turtus - penktadienį interviu LRT radijui sakė Lietuvos prezidentė.</rdfs:comment>
+        <events:said_by__speaker rdf:resource="&politics1;Dalia_Grybauskaite_3"/>
+        <events:said__substance rdf:resource="&politics1;Grybauskaites_sakymo_turinys"/>
+        <politics:has__saying_object rdf:resource="&politics1;LIetuva"/>
+        <semlt:is_related_with__object rdf:resource="&politics1;Lietuva__turi_zinoti_apie__savo_gelmes_turtus"/>
+        <politics:said_to__recipient rdf:resource="&politics1;Lietuvos_radijas"/>
+        <events:occurs_at__time_moment rdf:resource="&politics1;penktadieni"/>
+        <politics:has__saying_object rdf:resource="&politics1;savo_gelmes_turtai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Grybauskaites_sakymas_Ulbinaites_sakyme_PILNAS_1 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Grybauskaites_sakymas_Ulbinaites_sakyme_PILNAS_1">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">atkreipė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">Prezidentė taip pat susitikime atkreipė ypatingą dėmesį</rdfs:comment>
+        <politics:has__event_type rdf:resource="&politics;event_by_type_other"/>
+        <events:said_by__speaker rdf:resource="&politics;prezidente"/>
+        <politics:has__saying_object rdf:resource="&politics1;demesi"/>
+        <events:said_in__meeting rdf:resource="&politics1;susitikime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Grybauskaites_sakymas_Ulbinaites_sakyme_PILNAS_2 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Grybauskaites_sakymas_Ulbinaites_sakyme_PILNAS_2">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">pabrėžė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">Prezidentė (.... taip pat susitikime atkreipė ypatingą dėmesį ir)....... pabrėžė „Chevron“ atstovams, kad vykdant skalūninių dujų žvalgybą šalyje turi būti laikomasi visų gamtosauginių reikalavimų, taip pat vykdomas labai aktyvus dialogas su vietos bendruomene ir visos šalies žmonėms pateikiama kaip galima aiškesnė ir suprantamesnė informacija</rdfs:comment>
+        <events:said_by__speaker rdf:resource="&politics;prezidente"/>
+        <politics:said_to__recipient rdf:resource="&politics1;Chevron_atstovams"/>
+        <events:said__substance rdf:resource="&politics1;Grybauskaites_pabrezimo_Ulbinaites_sakyme_turinys"/>
+        <politics:has__saying_object rdf:resource="&politics1;aiskesne_ir_suprantamesne_informacija"/>
+        <politics:has__saying_object rdf:resource="&politics1;dialogas"/>
+        <politics:has__saying_object rdf:resource="&politics1;gamtosauginių_reikalavimų"/>
+        <politics:has__saying_object rdf:resource="&politics1;salies_zmones"/>
+        <politics:has__saying_object rdf:resource="&politics1;skaluniniu_duju_zvalgyba"/>
+        <politics:has__saying_object rdf:resource="&politics1;vietos_bendruomene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Grybauskaites_sakymo_turinys -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Grybauskaites_sakymo_turinys">
+        <rdf:type rdf:resource="&events;substance"/>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">Lietuva turi žinoti apie savo gelmės turtus </rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#J_Johnsonas_deste -->
+
+    <owl:NamedIndividual rdf:about="&politics1;J_Johnsonas_deste">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">dėstė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment rdf:datatype="&xsd;string">„Mes turėjome labai gerą, pozityvų susitikimą su šalies vadove, kurio metu aptarėme mūsų tikslą įvertinti Lietuvos energetinius išteklius. Mes dirbame vadovaudamiesi aukščiausiais aplinkosaugos standartais, skaidriai, ir mes tikimės gebėti susikalbėti su vietos bendruomenėmis visiškai informuodami apie savo veiklą“, - dėstė J. Johnsonas.
+</rdfs:comment>
+        <events:said_in__meeting rdf:resource="&politics1;D_Grybauskaite_susitiko_su_atstovais_Delfi"/>
+        <events:said_by__speaker rdf:resource="&politics1;Jamesas_Johnsonas"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#J_Johnsonas_sake_2 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;J_Johnsonas_sake_2">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">sakė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment rdf:datatype="&xsd;string">„Mes atsakysime į jų klausimus, dalyvausime dialoge, kad jie galėtų suprasti, ko tikėtis. Tačiau svarbiausia mums padėti jiems suprasti, kad mes dirbame vadovaudamiesi aukščiausiais aplinkosaugos standartais ir mes suprantame, kad geriamasis vanduo jiems yra ypatingai svarbus. Tikimės padėti jiems suprasti, kad mes vykdome savo darbą be jokių pavojų vandens ištekliams ar jų gyvenimo būdui“, - sakė J. Johnsonas.</rdfs:comment>
+        <events:said_in__meeting rdf:resource="&politics1;D_Grybauskaite_susitiko_su_atstovais_Delfi"/>
+        <events:said_by__speaker rdf:resource="&politics1;Jamesas_Johnsonas"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#J_Johnsonas_sakė_1 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;J_Johnsonas_sakė_1">
+        <rdf:type rdf:resource="&politics;saying"/>
+        <rdfs:label xml:lang="lt">sakė</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Paklaustas, kaip bendrovė ketina susitarti su Tauragės gyventojais, kurie nerimauja dėl planuojamo žvalgybos proceso, J. Johnsonas sakė, jog bendrovė Lietuvoje taikys tokią pat praktiką, kaip ir kitose šalyse.</rdfs:comment>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:said_in__meeting rdf:resource="&politics1;D_Grybauskaite_susitiko_su_atstovais_Delfi"/>
+        <events:said_by__speaker rdf:resource="&politics1;Jamesas_Johnsonas"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Jamesas_Johnsonas -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Jamesas_Johnsonas">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">J. Johnsonas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_recognized_as__actual_object rdf:resource="&agents1;Jay_Johnson"/>
+        <events:said__saying rdf:resource="&politics1;J_Johnsonas_deste"/>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Jay_Jahnson_1 -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Jay_Jahnson_1">
+        <rdf:type rdf:resource="&agents;person"/>
+        <rdfs:label xml:lang="lt">J. Jahnson</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <semlt:is_referred_in__document rdf:resource="&semlt1;dokumentas_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#LIetuva -->
+
+    <owl:NamedIndividual rdf:about="&politics1;LIetuva">
+        <rdf:type rdf:resource="&agents;agent"/>
+        <rdfs:label xml:lang="lt">Lietuva</rdfs:label>
+        <semlt:is_recognized_as__actual_object rdf:resource="&agents1;Lietuvos_Respublika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Lietuva__turi_zinoti_apie__savo_gelmes_turtus -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Lietuva__turi_zinoti_apie__savo_gelmes_turtus">
+        <rdf:type rdf:resource="&events;event"/>
+        <rdfs:label xml:lang="lt">turi žinoti</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <events:has__target rdf:resource="&politics1;savo_gelmes_turtai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Lietuvos_radijas -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Lietuvos_radijas">
+        <rdf:type rdf:resource="&agents;agent"/>
+        <rdfs:label xml:lang="lt">Lietuvos radijas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#Ulbinaites_destymo_turinys -->
+
+    <owl:NamedIndividual rdf:about="&politics1;Ulbinaites_destymo_turinys">
+        <rdf:type rdf:resource="&events;substance"/>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">Prezidentė taip pat susitikime atkreipė ypatingą dėmesį ir pabrėžė „Chevron“ atstovams, kad vykdant skalūninių dujų žvalgybą šalyje turi būti laikomasi visų gamtosauginių reikalavimų, taip pat vykdomas labai aktyvus dialogas su vietos bendruomene ir visos šalies žmonėms pateikiama kaip galima aiškesnė ir suprantamesnė informacija</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#aiskesne_ir_suprantamesne_informacija -->
+
+    <owl:NamedIndividual rdf:about="&politics1;aiskesne_ir_suprantamesne_informacija">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">aiškesnė ir suprantamesnė informacija</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#demesi -->
+
+    <owl:NamedIndividual rdf:about="&politics1;demesi">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">dėmesys</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#dialogas -->
+
+    <owl:NamedIndividual rdf:about="&politics1;dialogas">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">dialogas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#galimybės -->
+
+    <owl:NamedIndividual rdf:about="&politics1;galimybės">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">galimybės</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#gamtiniai_ištekliai -->
+
+    <owl:NamedIndividual rdf:about="&politics1;gamtiniai_ištekliai">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">gamtos ištekliai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#gamtosauginių_reikalavimų -->
+
+    <owl:NamedIndividual rdf:about="&politics1;gamtosauginių_reikalavimų">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">gamtosaugininkų reikalavimai</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#kaina -->
+
+    <owl:NamedIndividual rdf:about="&politics1;kaina">
+        <rdf:type rdf:resource="&events;abstract_price"/>
+        <events:belongs_to__other_object rdf:resource="&politics1;tauriųjų__metalų"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#kiekvienai_valstybei -->
+
+    <owl:NamedIndividual rdf:about="&politics1;kiekvienai_valstybei">
+        <rdf:type rdf:resource="&agents;agent"/>
+        <rdfs:label xml:lang="lt">kiekviena valstybė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#kiekvienai_valstybei_svarbu_žinoti_savo_gamtinius_išteklius,_energetinius_resursus_ir_galimybes. -->
+
+    <owl:NamedIndividual rdf:about="&politics1;kiekvienai_valstybei_svarbu_žinoti_savo_gamtinius_išteklius,_energetinius_resursus_ir_galimybes.">
+        <rdf:type rdf:resource="&events;event"/>
+        <rdfs:label xml:lang="lt">svarbu žinoti</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+        <rdfs:comment xml:lang="lt">kiekvienai valstybei svarbu žinoti savo gamtinius išteklius, energetinius resursus ir galimybes.</rdfs:comment>
+        <events:has__event_object rdf:resource="&events1;energetiniai_resursai"/>
+        <politics:has__event_type rdf:resource="&politics;obligation_event"/>
+        <events:has__event_object rdf:resource="&politics1;galimybės"/>
+        <events:has__event_object rdf:resource="&politics1;gamtiniai_ištekliai"/>
+        <events:has__event_object rdf:resource="&politics1;kiekvienai_valstybei"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#penktadieni -->
+
+    <owl:NamedIndividual rdf:about="&politics1;penktadieni">
+        <rdf:type rdf:resource="&time;fuzzy_date"/>
+        <rdfs:label xml:lang="lt">penktadienį</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#salies_zmones -->
+
+    <owl:NamedIndividual rdf:about="&politics1;salies_zmones">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">šalies žmonės</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#savo_gelmes_turtai -->
+
+    <owl:NamedIndividual rdf:about="&politics1;savo_gelmes_turtai">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">savo gelmės turtus</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#skaluniniu_duju_zvalgyba -->
+
+    <owl:NamedIndividual rdf:about="&politics1;skaluniniu_duju_zvalgyba">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">skalūninių dujų žvalgyba</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#sumažėjo -->
+
+    <owl:NamedIndividual rdf:about="&politics1;sumažėjo">
+        <rdf:type rdf:resource="&events;change"/>
+        <events:change__absract_object rdf:resource="&politics1;kaina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#susitikime -->
+
+    <owl:NamedIndividual rdf:about="&politics1;susitikime">
+        <rdf:type rdf:resource="&politics;meeting"/>
+        <rdfs:label xml:lang="lt">susitikimas</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#tauriųjų__metalų -->
+
+    <owl:NamedIndividual rdf:about="&politics1;tauriųjų__metalų">
+        <rdf:type rdf:resource="&semlt;object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#vietos_bendruomene -->
+
+    <owl:NamedIndividual rdf:about="&politics1;vietos_bendruomene">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">vietos bendruomenė</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Politics1#ypatinga_demesi -->
+
+    <owl:NamedIndividual rdf:about="&politics1;ypatinga_demesi">
+        <rdf:type rdf:resource="&semlt;object_other"/>
+        <rdfs:label xml:lang="lt">ypatingas dėmesys</rdfs:label>
+        <semlt:trusted rdf:datatype="&xsd;string">untrusted</semlt:trusted>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
