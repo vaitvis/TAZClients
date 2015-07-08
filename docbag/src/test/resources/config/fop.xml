@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<fop version="1.0">
+    <base>.</base>
+    <source-resolution>72</source-resolution>
+    <target-resolution>72</target-resolution>
+    <default-page-settings height="297mm" width="210mm"/>
+    <renderers>
+        <renderer mime="application/pdf">
+            <filterList>
+                <value>flate</value>
+            </filterList>
+            <!--<fonts>-->
+                <!--<font metrics-url="font.xml" kerning="yes" embed-url="font.ttf">-->
+                    <!--<font-triplet name="arial" style="normal" weight="normal"/>-->
+                <!--</font>-->
+            <!--</fonts>-->
+        </renderer>
+    </renderers>
+</fop>
