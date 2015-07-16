@@ -5,18 +5,6 @@
   <version>1.80</version>
   <name>TAZClients</name>
   <build>
-    <sourceDirectory>src/main</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>java</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>resources</directory>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
