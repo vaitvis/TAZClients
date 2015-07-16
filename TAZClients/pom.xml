@@ -5,10 +5,10 @@
   <version>1.80</version>
   <name>TAZClients</name>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>src/main</sourceDirectory>
     <resources>
       <resource>
-        <directory>src</directory>
+        <directory>java</directory>
         <excludes>
           <exclude>**/*.java</exclude>
         </excludes>
