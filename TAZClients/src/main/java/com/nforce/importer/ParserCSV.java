@@ -1,5 +1,7 @@
 package com.nforce.importer;
 
+import com.nforce.Utils;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;

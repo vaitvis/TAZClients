@@ -5,59 +5,61 @@ package com.nforce.model;
  */
 public class SiaPdfContext extends PdfContext {
 
-    public String getDate() {
-        return getContext().get("date");
-    }
+    public String getDate() { return get("date"); }
 
-    public void setDate(String date) {
-        getContext().put("date", date);
-    }
+    public void setDate(String date) { put("date", date); }
 
-    public String getCounter() {
-        return getContext().get("counter");
-    }
+    public String getCounter() { return get("counter"); }
 
     public void setCounter(String counter) {
-        getContext().put("counter", counter);
+        put("counter", counter);
     }
 
     public String getName() {
-        return getContext().get("name");
+        return get("name");
     }
 
     public void setName(String name) {
-        getContext().put("name", name);
+        put("name", name);
     }
 
     public String getAddress() {
-        return getContext().get("address");
+        return get("address");
     }
 
     public void setAddress(String address) {
-        getContext().put("address", address);
+        put("address", address);
     }
 
     public String getCode() {
-        return getContext().get("code");
+        return get("code");
     }
 
     public void setCode(String code) {
-        getContext().put("code", code);
+        put("code", code);
     }
 
     public String getPhone() {
-        return getContext().get("phone");
+        return get("phone");
     }
 
     public void setPhone(String phone) {
-        getContext().put("phone", phone);
+        put("phone", phone);
     }
 
     public String getEmail() {
-        return getContext().get("email");
+        return get("email");
     }
 
     public void setEmail(String email) {
-        getContext().put("email", email);
+        put("email", email);
     }
+
+    public String getPrice() { return get("price"); }
+
+    public void setPrice(String price) { put("price", price); }
+
+    public String getPeriod() { return get("period"); }
+
+    public void setPeriod(String period) { put("period", period); }
 }

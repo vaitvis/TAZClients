@@ -17,4 +17,14 @@ public abstract class PdfContext {
     public Map<String, String> getContext() {
         return context;
     }
+
+    public String get(String key) {
+        return getContext().get(key);
+    }
+
+    public String put(String key, String value) { return getContext().put(key, value); }
+
+    public String getOrDefault(String key, String def) {
+        return getContext().getOrDefault(key, def);
+    }
 }

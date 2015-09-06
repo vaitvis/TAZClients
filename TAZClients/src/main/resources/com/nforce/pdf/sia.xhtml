@@ -1,63 +1,92 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <style type="text/css">
+            body {
+                font-family: 'Arial';
+            }
+            h2, h3 {
+                text-align: center;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            .description th,
+            .description td {
+                padding: 5px;
+            }
+            .top {
+                border-top: 1px solid black;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+            .left {
+                border-left: 1px solid black;
+            }
+            .bottom {
+                border-bottom: 1px solid black;
+                border-right: 1px solid black;
+            }
+        </style>
     </head>
-    <body style="font-family: 'DejaVu Sans'; font-size: small">
-        <br/><p style="text-align: center; font-weight: bold;">IŠANKSTINĖ SĄSKAITA</p>
-        <p style="text-align: center;">
-            <span style="text-align: center;">Data: $date</span><br/>
-            <span style="text-align: center;">Nr.: $counter</span>
-        </p>
-        <table>
+    <body>
+        <h2>IŠANKSTINĖ SĄSKAITA</h2>
+        <h3>Data: $date</h3>
+        <h3>Nr.: $counter</h3>
+        <table class="info">
+            <thead>
+                <tr>
+                    <th width="55%">PARDAVĖJAS</th>
+                    <th>PIRKĖJAS</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <td width="65%"><b>PARDAVĖJAS</b><br/>
-                        UAB „Teisės aktų žinios“<br/>
+                    <td style="vertical-align: top">UAB „Teisės aktų žinios“<br/>
                         Laisvės pr. 77, LT-06122, Vilnius<br/>
                         Įmonės kodas 303382241<br/>
                         A.s. LT447400048076123810<br/>
                         banke Danske Bank A/S Lietuvos filiale <br/>
                         Telefonas 8(685)69562<br/>
-                        Elektroninis paštas <a href="mailto:info@taz.lt">info@taz.lt</a><br/>
+                        <span>Elektroninis paštas <a href="mailto:info@taz.lt">info@taz.lt</a></span>
                     </td>
-                    <td><b>PIRKĖJAS</b><br/>
-                        $name<br/>
+                    <td style="vertical-align: top">$name<br/>
                         $address<br/>
                         $code<br/>
                         $phone<br/>
-                        <a href="mailto:$email">$email</a><br/>
+                        <a href="mailto:$email">$email</a>
                     </td>
                 </tr>
             </tbody>
         </table>
         <br/>
-        <table style="border: 1px solid black; padding: 5px;">
+        <table class="description">
+            <thead>
+                <tr>
+                    <th width="50%" class="left top">Prekės ar paslaugos pavadinimas</th>
+                    <th width="10%" class="top">Matas</th>
+                    <th width="10%" class="top">Kiekis</th>
+                    <th width="15%" class="top">Kaina, €</th>
+                    <th width="15%" class="top">Suma, €</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <th width="50%">Prekės ar paslaugos pavadinimas</th>
-                    <th width="10%">Matas</th>
-                    <th width="10%">Kiekis</th>
-                    <th width="15%">Kaina</th>
-                    <th width="15%">Suma</th>
-                </tr>
-                <tr>
-                    <td>„Teisės aktų žinios“ prenumerata 12 mėnesių</td>
-                    <td>Vnt.</td>
-                    <td>1</td>
-                    <td>55,90 Eur</td>
-                    <td>55,90 Eur</td>
+                    <td class="left bottom">„Teisės aktų žinios“ prenumerata $period</td>
+                    <td class="bottom">Vnt.</td>
+                    <td class="bottom">1</td>
+                    <td class="bottom">$price</td>
+                    <td class="bottom">$price</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>Iš viso:</td>
-                    <td>55,90 Eur</td>
+                    <td class="left bottom">Iš viso:</td>
+                    <td class="bottom">$price</td>
                 </tr>
             </tbody>
         </table>
-        <p><b>Suma žodžiais:</b> penkiasdešimt penki eurai 90 euro centų.</p><br/>
         <p><small><b>Pastaba. Mokėjimo pavedime nurodykite šios išankstinės sąskaitos datą ir numerį.</b></small></p>
         <br/><br/>
         <hr/>

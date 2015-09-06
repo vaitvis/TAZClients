@@ -1,4 +1,4 @@
-package com.nforce.importer;
+package com.nforce;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
