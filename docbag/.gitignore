@@ -1,8 +1,0 @@
-.idea
-*.iml
-target
-site
-.classpath
-.project
-.settings
-velocity.log
