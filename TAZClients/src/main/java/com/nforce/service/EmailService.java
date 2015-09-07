@@ -1,5 +1,7 @@
 package com.nforce.service;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 import javax.activation.DataHandler;
@@ -17,6 +19,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+import com.nforce.model.InputStreamPdfDataSource;
 import org.apache.commons.lang3.StringUtils;
 
 import com.nforce.bean.ConfigurationBean;
@@ -25,8 +28,12 @@ public class EmailService {
 
 	@Inject 
 	private ConfigurationBean configurationBean;
-	
+
 	public boolean sendMail(String recipient, String subject, String text) {
+		return sendMail(recipient, subject, text, null);
+	}
+
+	public boolean sendMail(String recipient, String subject, String text, InputStream attachment) {
 		Properties properties = System.getProperties();
 		if(StringUtils.isAnyBlank(configurationBean.getSmtpHost(), configurationBean.getSmtpUser(), configurationBean.getSmtpPassword(), configurationBean.getSmtpFrom())) {
 			return false;
@@ -63,23 +70,38 @@ public class EmailService {
 	        messageBodyPart.setDataHandler(new DataHandler(fds));
 	        messageBodyPart.setHeader("Content-ID", "<logo>");
 	        multipart.addBodyPart(messageBodyPart);
-			
+
+			if(attachment != null) {
+				messageBodyPart = new MimeBodyPart();
+				DataSource ads = new InputStreamPdfDataSource(attachment);
+				messageBodyPart.setDataHandler(new DataHandler(ads));
+				messageBodyPart.setFileName("isankstine_saskaita.pdf");
+	        	multipart.addBodyPart(messageBodyPart);
+			}
+
 			message.setContent(multipart);
 
 			t = session.getTransport("smtp");
 			t.connect(configurationBean.getSmtpHost(), configurationBean.getSmtpUser(), configurationBean.getSmtpPassword());
 			t.sendMessage(message, message.getAllRecipients());
 			return true;
-	     }catch (Exception ex) {
+		}catch (Exception ex) {
 	         return false;
-	     } finally {
-	    	 if(t != null) {
-	    		 try {
+		} finally {
+			if (attachment != null) {
+				try {
+					attachment.close();
+				} catch (IOException e) {
+					return false;
+				}
+			}
+			if(t != null) {
+				try {
 					t.close();
 				} catch (MessagingException e) {
 					return false;
 				}
-	    	 }
+			}
 	     }
 	}
 	

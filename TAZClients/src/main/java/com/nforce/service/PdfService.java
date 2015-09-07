@@ -2,6 +2,7 @@ package com.nforce.service;
 
 import com.nforce.Utils;
 import com.nforce.model.Client;
+import com.nforce.model.SiaCustomPdfParams;
 import com.nforce.model.SiaPdfContext;
 import com.nforce.pdf.ITextPdfCreator;
 
@@ -22,11 +23,11 @@ public class PdfService {
     @Inject
     private TazIntegrationService tazIntegrationService;
 
-    public InputStream getProformaInvoicePdf(Client client) {
-        return creator.getPdf(fillFromClient(client), "sia.xhtml");
+    public InputStream getProformaInvoicePdf(Client client, SiaCustomPdfParams params) {
+        return creator.getPdf(fillFromClient(client, params), "sia.xhtml");
     }
 
-    private SiaPdfContext fillFromClient(Client client) {
+    private SiaPdfContext fillFromClient(Client client, SiaCustomPdfParams params) {
         SiaPdfContext context = new SiaPdfContext();
         context.setAddress(client.getAddress());
         context.setCode(client.getCompanyCode());
@@ -38,7 +39,20 @@ public class PdfService {
         context.setName(client.getCompanyTitle());
         context.setEmail(client.getEmail());
         context.setPhone(client.getPhoneNumber());
-        context.setPrice("55,90");
+        context.setPrice(params.getPrice());
+        context.setJobTitle("Buhalterė");
+        context.setResponsiblePersonName("Asta Driskiuvienė");
+
+        Date startDate = null;
+        if(client.getValidTo() == null) {
+            startDate = new Date();
+        } else {
+            startDate = Utils.addMonths(client.getValidTo(), 1);
+        }
+        startDate = Utils.resetDate(startDate, Utils.TimeOfMonth.START);
+        Date endDate = Utils.addMonths(startDate, 11);
+        endDate = Utils.resetDate(endDate, Utils.TimeOfMonth.END);
+        context.setPeriod("nuo " + format.format(startDate) + " iki " + format.format(endDate));
 
         return context;
     }

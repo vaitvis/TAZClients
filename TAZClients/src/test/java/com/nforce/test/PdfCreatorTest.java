@@ -33,6 +33,8 @@ public class PdfCreatorTest extends AbstractTest {
         context.setPhone("+37061234567");
         context.setPrice("55,90");
         context.setPeriod("nuo 2007 05 11 iki 2008 05 10");
+        context.setJobTitle("Buhalterė");
+        context.setResponsiblePersonName("Vaida Vaidaitė");
     }
 
     @Test

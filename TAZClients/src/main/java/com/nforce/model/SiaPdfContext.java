@@ -11,49 +11,27 @@ public class SiaPdfContext extends PdfContext {
 
     public String getCounter() { return get("counter"); }
 
-    public void setCounter(String counter) {
-        put("counter", counter);
-    }
+    public void setCounter(String counter) { put("counter", counter); }
 
-    public String getName() {
-        return get("name");
-    }
+    public String getName() { return get("name"); }
 
-    public void setName(String name) {
-        put("name", name);
-    }
+    public void setName(String name) { put("name", name); }
 
-    public String getAddress() {
-        return get("address");
-    }
+    public String getAddress() { return get("address"); }
 
-    public void setAddress(String address) {
-        put("address", address);
-    }
+    public void setAddress(String address) { put("address", address); }
 
-    public String getCode() {
-        return get("code");
-    }
+    public String getCode() { return get("code"); }
 
-    public void setCode(String code) {
-        put("code", code);
-    }
+    public void setCode(String code) { put("code", code); }
 
-    public String getPhone() {
-        return get("phone");
-    }
+    public String getPhone() { return get("phone"); }
 
-    public void setPhone(String phone) {
-        put("phone", phone);
-    }
+    public void setPhone(String phone) { put("phone", phone); }
 
-    public String getEmail() {
-        return get("email");
-    }
+    public String getEmail() { return get("email"); }
 
-    public void setEmail(String email) {
-        put("email", email);
-    }
+    public void setEmail(String email) { put("email", email); }
 
     public String getPrice() { return get("price"); }
 
@@ -62,4 +40,12 @@ public class SiaPdfContext extends PdfContext {
     public String getPeriod() { return get("period"); }
 
     public void setPeriod(String period) { put("period", period); }
+
+    public String getJobTitle() { return get("jobTitle"); }
+
+    public void setJobTitle(String jobTitle) { put("jobTitle", jobTitle); }
+
+    public String getResponsiblePersonName() { return get("responsiblePersonName"); }
+
+    public void setResponsiblePersonName(String responsiblePersonName) { put("responsiblePersonName", responsiblePersonName); }
 }
