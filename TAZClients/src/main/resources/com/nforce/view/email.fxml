@@ -97,6 +97,24 @@
                </children>
             </GridPane>
             <HTMLEditor fx:id="emailText" htmlText="" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <CheckBox fx:id="proformaInvoiceCheckBox" minWidth="-Infinity" mnemonicParsing="false" onAction="#proformaInvoiceChanged" text="Siųsti išankstinę sąskaitą" GridPane.hgrow="NEVER" />
+                  <Label fx:id="proformaInvoicePriceLabel" text="Kaina, €" GridPane.rowIndex="1" />
+                  <TextField fx:id="proformaInvoicePriceTextField" maxWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
          </children>
       </VBox>
   </items>

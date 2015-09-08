@@ -1,10 +1,7 @@
 /target/
-/.classpath
+/dependency-reduced-pom.xml
 /tazclients.prop
-/.settings/
-/.project
 /test.prop
 /TAZClients.iml
 /test.pdf
 /testPdfService.pdf
-/velocity.log

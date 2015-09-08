@@ -1,13 +1,12 @@
 package com.nforce.view;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-
+import com.nforce.bean.SessionBean;
+import com.nforce.bean.ToolBarBean;
+import com.nforce.model.*;
+import com.nforce.service.ClientsService;
+import com.nforce.service.EmailService;
+import com.nforce.service.HistoryService;
+import com.nforce.service.PdfService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Service;
@@ -17,41 +16,21 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Pagination;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.*;
 import javafx.scene.web.HTMLEditor;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
-
-import javax.inject.Inject;
-
 import org.apache.commons.lang3.StringUtils;
 import org.controlsfx.control.Notifications;
-import org.controlsfx.control.action.Action;
-import org.controlsfx.dialog.Dialog;
-import org.controlsfx.dialog.Dialogs;
 import org.controlsfx.validation.ValidationSupport;
 import org.controlsfx.validation.Validator;
 
-import com.nforce.bean.SessionBean;
-import com.nforce.bean.ToolBarBean;
-import com.nforce.model.Client;
-import com.nforce.model.ClientState;
-import com.nforce.model.DateConverter;
-import com.nforce.model.EventType;
-import com.nforce.model.Page;
-import com.nforce.model.PagedResult;
-import com.nforce.model.ToolBarButtonsAware;
-import com.nforce.service.ClientsService;
-import com.nforce.service.EmailService;
-import com.nforce.service.HistoryService;
+import javax.inject.Inject;
+import java.io.InputStream;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.*;
 
 @SuppressWarnings("deprecation")
 public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
@@ -93,6 +72,15 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 	
 	@FXML
 	private HTMLEditor emailText;
+
+	@FXML
+	private CheckBox proformaInvoiceCheckBox;
+
+	@FXML
+	private Label proformaInvoicePriceLabel;
+
+	@FXML
+	private TextField proformaInvoicePriceTextField;
 	
 	@Inject 
 	private ClientsService clientsService;
@@ -102,6 +90,9 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 	
 	@Inject
 	private HistoryService historyService;
+
+	@Inject
+	private PdfService pdfService;
 	
 	@Inject
 	private ToolBarBean toolBarBean;
@@ -144,22 +135,22 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 		clientStateFilter.setItems(states);
 		clientStateFilter.getSelectionModel().selectFirst();
 		clientStateFilter.setConverter(new StringConverter<ClientState>() {
-			
+
 			@Override
 			public String toString(ClientState object) {
-				if(object == null) {
+				if (object == null) {
 					return "Bet kokia";
 				}
 				return object.title;
 			}
-			
+
 			@Override
 			public ClientState fromString(String string) {
-				if("Bet kokia".equals(string)) {
+				if ("Bet kokia".equals(string)) {
 					return null;
 				} else {
-					for(ClientState s : ClientState.values()) {
-						if(s.title.equals(string)) {
+					for (ClientState s : ClientState.values()) {
+						if (s.title.equals(string)) {
 							return s;
 						}
 					}
@@ -167,6 +158,10 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 				return null;
 			}
 		});
+
+		proformaInvoicePriceLabel.setVisible(false);
+		proformaInvoicePriceTextField.setVisible(false);
+		proformaInvoicePriceTextField.setText("55,90");
 		
 		validFromFilter.setConverter(new DateConverter());
 		validToFilter.setConverter(new DateConverter());
@@ -309,57 +304,85 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 	}
 	
 	private void sendMail() {
-		Action response = Dialogs.create().title("Ar siųsti laišką?").message("Ar siųsti laišką " + selectedClients.length + " gavėjui (-ams)?")
-			      .showConfirm();
-		if(response == Dialog.ACTION_YES) {
-			Service<Integer> emailWorker = new Service<Integer>() {
-				@Override
-				protected Task<Integer> createTask() {
-					return new Task<Integer>() {
-						@Override
-						protected Integer call() throws Exception {
-							Integer failCount = 0;
-							Integer index = 1;
-							for(Client client : selectedClients) {
-								updateMessage("Siunčiamas laiškas " + index++ + "/" + selectedClients.length);
-								if(StringUtils.isNotEmpty(client.getEmail())) {
-									if(!emailService.sendMail(client.getEmail(), subject.getText(), emailText.getHtmlText())) {
-										failCount++;
-										historyService.insert(client.getId(), EventType.MAIL_FAILED, subject.getText());
-									} else {
-										historyService.insert(client.getId(), EventType.MAIL_SENT, subject.getText());
-									}
-								} else {
-									failCount++;
-									historyService.insert(client.getId(), EventType.MAIL_FAILED, subject.getText() + ": Neįvestas el. pašto adresas");
-								}
-							}
-							return failCount;
-						}
-					};
-				}
-			};
-			new ProgressDialog("Siunčiama...", emailWorker);
-			emailWorker.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
-				@Override
-				public void handle(WorkerStateEvent event) {
-					Integer failCount = (Integer) event.getSource().getValue();
-					if(failCount != null && failCount > 0) {
-						Notifications.create().title("Ne visi laiškai išsiųsti").text("Nepavyko išsiųsti " + failCount + " laiško (-ų).").showError();
-					} else {
-						Notifications.create().title("Siuntimas baigtas").text("Visi laiškai išsiųsti.").showInformation();
-					}
-				}
-			});
-			emailWorker.setOnFailed(new EventHandler<WorkerStateEvent>() {
+		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+		alert.setTitle("Ar siųsti laišką?");
+		alert.setHeaderText("Ar siųsti laišką?");
+		alert.setContentText("Ar siųsti laišką " + selectedClients.length + " gavėjui (-ams)?\nĮvesta kaina: " + proformaInvoicePriceTextField.getText());
 
-				@Override
-				public void handle(WorkerStateEvent event) {
-					event.getSource().getException().printStackTrace();
-					Notifications.create().title("Nepavyko išsiųsti laiškų").text("Visai nepavyko.").showError();
-				}
-			});
-			emailWorker.start();
+		alert.showAndWait().ifPresent(response -> {
+			if (response == ButtonType.OK) {
+				Service<Integer> emailWorker = new Service<Integer>() {
+					@Override
+					protected Task<Integer> createTask() {
+						return new Task<Integer>() {
+							@Override
+							protected Integer call() throws Exception {
+								Integer failCount = 0;
+								Integer index = 1;
+								for (Client client : selectedClients) {
+									InputStream pdf = null;
+									if(proformaInvoiceCheckBox.isSelected()) {
+										SiaCustomPdfParams params = new SiaCustomPdfParams();
+										params.setPrice(proformaInvoicePriceTextField.getText());
+										updateMessage("Generuojama išankstinė sąskaita " + index + "/" + selectedClients.length);
+										pdf = pdfService.getProformaInvoicePdf(client, params);
+
+									}
+									updateMessage("Siunčiamas laiškas " + index++ + "/" + selectedClients.length);
+									if (StringUtils.isNotEmpty(client.getEmail())) {
+										if (!emailService.sendMail(client.getEmail(), subject.getText(), emailText.getHtmlText(), pdf)) {
+											failCount++;
+											historyService.insert(client.getId(), EventType.MAIL_FAILED, subject.getText());
+										} else {
+											historyService.insert(client.getId(), EventType.MAIL_SENT, subject.getText());
+											if(pdf != null) {
+												historyService.insert(client.getId(), EventType.PROFORMA_INVOICE_SENT, "Įvesta kaina: " + proformaInvoicePriceTextField.getText());
+												pdf.close();
+											}
+										}
+									} else {
+										failCount++;
+										historyService.insert(client.getId(), EventType.MAIL_FAILED, subject.getText() + ": Neįvestas el. pašto adresas");
+									}
+								}
+								return failCount;
+							}
+						};
+					}
+				};
+				new ProgressDialog("Siunčiama...", emailWorker);
+				emailWorker.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
+					@Override
+					public void handle(WorkerStateEvent event) {
+						Integer failCount = (Integer) event.getSource().getValue();
+						if (failCount != null && failCount > 0) {
+							Notifications.create().title("Ne visi laiškai išsiųsti").text("Nepavyko išsiųsti " + failCount + " laiško (-ų).").showError();
+						} else {
+							Notifications.create().title("Siuntimas baigtas").text("Visi laiškai išsiųsti.").showInformation();
+						}
+					}
+				});
+				emailWorker.setOnFailed(new EventHandler<WorkerStateEvent>() {
+
+					@Override
+					public void handle(WorkerStateEvent event) {
+						event.getSource().getException().printStackTrace();
+						Notifications.create().title("Nepavyko išsiųsti laiškų").text("Visai nepavyko.").showError();
+					}
+				});
+				emailWorker.start();
+			}
+		});
+	}
+
+	@FXML
+	public void proformaInvoiceChanged() {
+		if(proformaInvoiceCheckBox.isSelected()) {
+			proformaInvoicePriceLabel.setVisible(true);
+			proformaInvoicePriceTextField.setVisible(true);
+		} else {
+			proformaInvoicePriceLabel.setVisible(false);
+			proformaInvoicePriceTextField.setVisible(false);
 		}
 	}
 }

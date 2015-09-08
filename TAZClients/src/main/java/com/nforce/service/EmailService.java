@@ -1,6 +1,5 @@
 package com.nforce.service;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -18,8 +17,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.mail.util.ByteArrayDataSource;
 
-import com.nforce.model.InputStreamPdfDataSource;
 import org.apache.commons.lang3.StringUtils;
 
 import com.nforce.bean.ConfigurationBean;
@@ -73,7 +72,7 @@ public class EmailService {
 
 			if(attachment != null) {
 				messageBodyPart = new MimeBodyPart();
-				DataSource ads = new InputStreamPdfDataSource(attachment);
+				DataSource ads = new ByteArrayDataSource(attachment, "application/pdf");
 				messageBodyPart.setDataHandler(new DataHandler(ads));
 				messageBodyPart.setFileName("isankstine_saskaita.pdf");
 	        	multipart.addBodyPart(messageBodyPart);
@@ -88,13 +87,6 @@ public class EmailService {
 		}catch (Exception ex) {
 	         return false;
 		} finally {
-			if (attachment != null) {
-				try {
-					attachment.close();
-				} catch (IOException e) {
-					return false;
-				}
-			}
 			if(t != null) {
 				try {
 					t.close();

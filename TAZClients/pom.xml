@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.nforce</groupId>
   <artifactId>TAZClients</artifactId>
-  <version>1.80</version>
+  <version>1.85</version>
   <name>TAZClients</name>
   <build>
     <plugins>
@@ -46,7 +46,7 @@
     <dependency>
 	    <groupId>org.controlsfx</groupId>
 	    <artifactId>controlsfx</artifactId>
-	    <version>8.20.8</version>
+	    <version>8.40.10-SNAPSHOT</version>
 	</dependency>
 	<dependency>
 		<groupId>org.apache.httpcomponents</groupId>
@@ -90,4 +90,15 @@
 		<scope>test</scope>
 	</dependency>
   </dependencies>
+
+	<repositories>
+		<repository>
+			<id>oss-sonatype</id>
+			<name>oss-sonatype</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
