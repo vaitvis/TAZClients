@@ -45,7 +45,7 @@ public class ITextPdfCreator {
         try {
             PdfWriter writer = PdfWriter.getInstance(document, bout);
             document.open();
-            XMLWorkerHelper.getInstance().parseXHtml(writer, document, parseTemplate(pdfContext, template));
+            XMLWorkerHelper.getInstance().parseXHtml(writer, document, parseTemplate(pdfContext, template), Charset.forName("UTF-8"));
             document.close();
         } catch (IOException | DocumentException e) {
             e.printStackTrace();
@@ -56,7 +56,7 @@ public class ITextPdfCreator {
 
     private InputStream parseTemplate(PdfContext pdfContext, String template) {
         String html = "";
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(ITextPdfCreator.class.getResourceAsStream(template)))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(ITextPdfCreator.class.getResourceAsStream(template), StandardCharsets.UTF_8))) {
             html = br.lines().collect(Collectors.joining(System.lineSeparator()));
         } catch (IOException e) {
             e.printStackTrace();

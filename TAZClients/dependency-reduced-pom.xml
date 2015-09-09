@@ -4,7 +4,7 @@
   <groupId>com.nforce</groupId>
   <artifactId>TAZClients</artifactId>
   <name>TAZClients</name>
-  <version>1.80</version>
+  <version>1.86</version>
   <build>
     <plugins>
       <plugin>
@@ -36,6 +36,14 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <snapshots />
+      <id>oss-sonatype</id>
+      <name>oss-sonatype</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
