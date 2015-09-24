@@ -37,7 +37,7 @@ public class PdfServiceTest extends AbstractTest {
     public void setUp() {
         boolean loggedIn = loginService.login(getUserName(), getPassword());
         Assert.assertTrue(loggedIn);
-        client = clientsService.get(3);
+        client = clientsService.get(1);
         Assert.assertNotNull(client);
         System.out.println(client);
     }

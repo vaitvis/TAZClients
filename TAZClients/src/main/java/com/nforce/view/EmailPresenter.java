@@ -307,7 +307,11 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
 		alert.setTitle("Ar siųsti laišką?");
 		alert.setHeaderText("Ar siųsti laišką?");
-		alert.setContentText("Ar siųsti laišką " + selectedClients.length + " gavėjui (-ams)?\nĮvesta kaina: " + proformaInvoicePriceTextField.getText());
+		String contentText = "Ar siųsti laišką " + selectedClients.length + " gavėjui (-ams)?\n";
+		if(proformaInvoiceCheckBox.isSelected()) {
+			contentText += "Įvesta kaina: " + proformaInvoicePriceTextField.getText();
+		}
+		alert.setContentText(contentText);
 
 		alert.showAndWait().ifPresent(response -> {
 			if (response == ButtonType.OK) {
@@ -330,7 +334,7 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 									}
 									updateMessage("Siunčiamas laiškas " + index++ + "/" + selectedClients.length);
 									if (StringUtils.isNotEmpty(client.getEmail())) {
-										if (!emailService.sendMail(client.getEmail(), subject.getText(), emailText.getHtmlText(), pdf)) {
+										if (!emailService.sendMail(client.getEmail(), subject.getText(), emailText.getHtmlText(), pdf, proformaInvoiceCheckBox.isSelected())) {
 											failCount++;
 											historyService.insert(client.getId(), EventType.MAIL_FAILED, subject.getText());
 										} else {

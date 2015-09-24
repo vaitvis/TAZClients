@@ -29,10 +29,10 @@ public class EmailService {
 	private ConfigurationBean configurationBean;
 
 	public boolean sendMail(String recipient, String subject, String text) {
-		return sendMail(recipient, subject, text, null);
+		return sendMail(recipient, subject, text, null, false);
 	}
 
-	public boolean sendMail(String recipient, String subject, String text, InputStream attachment) {
+	public boolean sendMail(String recipient, String subject, String text, InputStream attachment, boolean firstOnly) {
 		Properties properties = System.getProperties();
 		if(StringUtils.isAnyBlank(configurationBean.getSmtpHost(), configurationBean.getSmtpUser(), configurationBean.getSmtpPassword(), configurationBean.getSmtpFrom())) {
 			return false;
@@ -51,6 +51,9 @@ public class EmailService {
 	    	}
 	    	for(String r : recipients) {
 	    		message.addRecipient(Message.RecipientType.TO, new InternetAddress(r));
+				if(firstOnly) {
+					break;
+				}
 	    	}
 
 			message.setSubject(subject, "utf-8");

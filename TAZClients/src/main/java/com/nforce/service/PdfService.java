@@ -5,6 +5,7 @@ import com.nforce.model.Client;
 import com.nforce.model.SiaCustomPdfParams;
 import com.nforce.model.SiaPdfContext;
 import com.nforce.pdf.ITextPdfCreator;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.inject.Inject;
 import java.io.InputStream;
@@ -32,12 +33,19 @@ public class PdfService {
         context.setAddress(client.getAddress());
         context.setCode(client.getCompanyCode());
 
-        context.setCounter(String.valueOf(tazIntegrationService.getProformaInvoiceId()));
+        context.setCounter(String.valueOf(client.getId()));
 
         DateFormat format = Utils.getDateFormat("yyyy MM dd");
         context.setDate(format.format(new Date()));
         context.setName(client.getCompanyTitle());
-        context.setEmail(client.getEmail());
+
+        if(StringUtils.isNotBlank(client.getEmail())) {
+            String recipients[] = client.getEmail().split(",");
+            if (recipients != null && recipients.length > 0) {
+                context.setEmail(recipients[0]);
+            }
+        }
+
         context.setPhone(client.getPhoneNumber());
         context.setPrice(params.getPrice());
         context.setJobTitle("Buhalterė");
