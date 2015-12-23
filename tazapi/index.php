@@ -4,6 +4,7 @@
     include_once "login.inc";
     include_once "clients.inc";
     include_once "history.inc";
+    include_once "stats.inc";
     include_once "tazintegration.inc";
     include_once "database.inc";
 
