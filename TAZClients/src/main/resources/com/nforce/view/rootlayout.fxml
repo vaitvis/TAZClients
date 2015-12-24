@@ -27,7 +27,8 @@
                   <Button fx:id="homeButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doHome" text="Pradžia" textAlignment="CENTER" />
                   <Button fx:id="clientsButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doClients" text="Klientai" GridPane.rowIndex="1" />
                   <Button fx:id="emailButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doEmail" text="Paštas" GridPane.rowIndex="2" />
-                  <Button fx:id="settingsButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSettings" text="Nustatymai" GridPane.rowIndex="3" />
+                  <Button fx:id="statsButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doStats" text="Statistika" GridPane.rowIndex="3" />
+                  <Button fx:id="settingsButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSettings" text="Nustatymai" GridPane.rowIndex="4" />
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" top="10.0" />

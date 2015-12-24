@@ -24,6 +24,9 @@ public class RootLayoutPresenter implements Initializable, SessionListener {
 	
 	@FXML
 	private Button emailButton;
+
+	@FXML
+	private Button statsButton;
 	
 	@FXML
 	private Button settingsButton;
@@ -58,7 +61,12 @@ public class RootLayoutPresenter implements Initializable, SessionListener {
 	public void doEmail() {
 		contentBean.changeContent(new EmailView());
 	}
-	
+
+	@FXML
+	public void doStats() {
+		contentBean.changeContent(new StatsView());
+	}
+
 	@FXML
 	public void doSettings() {
 		contentBean.changeContent(new SettingsView());
@@ -68,6 +76,7 @@ public class RootLayoutPresenter implements Initializable, SessionListener {
 		homeButton.setDisable(disable);
 		clientsButton.setDisable(disable);
 		emailButton.setDisable(sessionBean.isAdmin() ? disable : true);
+		statsButton.setDisable(sessionBean.isAdmin() ? disable : true);
 		settingsButton.setDisable(sessionBean.isAdmin() ? disable : true);
 	}
 	
