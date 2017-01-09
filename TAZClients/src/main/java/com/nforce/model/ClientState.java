@@ -8,7 +8,8 @@ public enum ClientState {
 	ALIVE("Aktyvus", 1, false),
 	DEAD("Neaktyvus", 2, false),
 	COMATOSE("Tarpinis", 3, false),
-	HIDDEN("Paslėptas", 4, true);
+	HIDDEN("Paslėptas", 4, true),
+	SPECIAL("Ypatingas", 5, false);
 	
 	public String title;
 	public int value;

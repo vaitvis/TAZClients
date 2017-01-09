@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.nforce</groupId>
   <artifactId>TAZClients</artifactId>
-  <version>1.90</version>
+  <version>1.91</version>
   <name>TAZClients</name>
   <build>
     <plugins>
@@ -46,7 +46,7 @@
     <dependency>
 	    <groupId>org.controlsfx</groupId>
 	    <artifactId>controlsfx</artifactId>
-	    <version>8.40.10-SNAPSHOT</version>
+	    <version>8.40.10</version>
 	</dependency>
 	<dependency>
 		<groupId>org.apache.httpcomponents</groupId>
@@ -101,4 +101,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 </project>

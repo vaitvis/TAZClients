@@ -71,7 +71,7 @@ public class StatsPresenter implements TazInitializable {
                      return new ReadOnlyObjectWrapper(p.getValue().get(state));
                 }
             });
-            column.setMinWidth(180);
+            column.setMinWidth(150);
             subscribersData.add(column);
         }
         TableColumn<HashMap<ClientState, String>, String> column = new TableColumn<>("Iš viso");
@@ -80,7 +80,7 @@ public class StatsPresenter implements TazInitializable {
                  return new ReadOnlyObjectWrapper(p.getValue().get(null));
             }
         });
-        column.setMinWidth(180);
+        column.setMinWidth(150);
         subscribersData.add(column);
         subscribersTable.getColumns().addAll(subscribersData);
     }
