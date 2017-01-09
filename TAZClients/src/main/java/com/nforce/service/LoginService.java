@@ -22,7 +22,6 @@ public class LoginService extends WebService {
 			return false;
 		}
 		Gson gson = buildGson();
-		System.out.println(json);
 		LoginData loginData = gson.fromJson(json, LoginData.class);
 		
 		if(loginData != null) {
