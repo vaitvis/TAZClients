@@ -161,7 +161,7 @@ public class EmailPresenter implements TazInitializable, ToolBarButtonsAware {
 
 		proformaInvoicePriceLabel.setVisible(false);
 		proformaInvoicePriceTextField.setVisible(false);
-		proformaInvoicePriceTextField.setText("55,90");
+		proformaInvoicePriceTextField.setText("53,72");
 		
 		validFromFilter.setConverter(new DateConverter());
 		validToFilter.setConverter(new DateConverter());

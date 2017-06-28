@@ -5,16 +5,16 @@
             body {
                 font-family: 'Arial';
             }
-            h2, h3 {
+            h3, h4 {
                 text-align: center;
             }
             table {
                 border-collapse: collapse;
+                font-size: 12px;
             }
             .description {
                 width: 100%;
             }
-            .description th,
             .description td {
                 padding: 5px;
             }
@@ -33,9 +33,12 @@
         </style>
     </head>
     <body>
-        <h2>IŠANKSTINĖ SĄSKAITA</h2>
-        <h3>Data: $date</h3>
-        <h3>Nr.: $counter</h3>
+    	<img src="src/main/resources/logohd.png" height="60%" />
+    	<div style="clear:both"></div>
+    	<hr/>
+        <h3>IŠANKSTINĖ SĄSKAITA</h3>
+        <h4>$date<br/>
+        	Nr.: $counter</h4>
         <table class="info">
             <thead>
                 <tr>
@@ -48,6 +51,7 @@
                     <td style="vertical-align: top">UAB „Teisės aktų žinios“<br/>
                         Laisvės pr. 77, LT-06122, Vilnius<br/>
                         Įmonės kodas 303382241<br/>
+                        PVM mokėtojo kodas LT100010984319<br/>
                         A.s. LT447400048076123810<br/>
                         banke Danske Bank A/S Lietuvos filiale <br/>
                         Telefonas 8(685)69562<br/>
@@ -64,35 +68,48 @@
         </table>
         <br/>
         <table class="description">
-            <thead>
+        	<tbody>
                 <tr>
-                    <th width="50%" class="left top">Prekės ar paslaugos pavadinimas</th>
-                    <th width="10%" class="top">Matas</th>
-                    <th width="10%" class="top">Kiekis</th>
-                    <th width="15%" class="top">Kaina, €</th>
-                    <th width="15%" class="top">Suma, €</th>
+                    <td style="text-align: center" width="50%" class="left top">Prekės ar paslaugos pavadinimas</td>
+                    <td style="text-align: center" width="10%" class="top">Matas</td>
+                    <td style="text-align: center" width="10%" class="top">Kiekis</td>
+                    <td style="text-align: center" width="15%" class="top">Kaina, €</td>
+                    <td style="text-align: center" width="15%" class="top">Suma, €</td>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
-                    <td class="left bottom">„Teisės aktų žinios“ prenumerata $period</td>
-                    <td class="bottom">Vnt.</td>
-                    <td class="bottom">1</td>
-                    <td class="bottom">$price</td>
-                    <td class="bottom">$price</td>
+                    <td class="left bottom">Leidinio „Teisės aktų žinios“ prenumerata $period</td>
+                    <td style="text-align: center" class="bottom">Vnt.</td>
+                    <td style="text-align: center" class="bottom">1</td>
+                    <td style="text-align: center" class="bottom">$price €</td>
+                    <td style="text-align: center" class="bottom">$price €</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
+                    <td style="border-right: 1px solid black"></td>
+                    <td class="bottom">Iš viso</td>
+                    <td style="text-align: center" class="bottom">$price €</td>
+                </tr>
+                <tr>
                     <td></td>
-                    <td class="left bottom">Iš viso:</td>
-                    <td class="bottom">$price</td>
+                    <td></td>
+                    <td style="border-right: 1px solid black"></td>
+                    <td class="bottom">PVM 21 %</td>
+                    <td style="text-align: center" class="bottom">11,28 €</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td style="border-right: 1px solid black"></td>
+                    <td class="bottom">Bendra suma</td>
+                    <td style="text-align: center" class="bottom">65,00 €</td>
                 </tr>
             </tbody>
         </table>
+        <p><small>Suma žodžiais: šešiasdešimt penki eurai 00 centų.</small></p>
+        <p><small>Pardavimo vadybininkė Lina Vaitkienė</small></p>
         <p><small><b>Pastaba. Mokėjimo pavedime nurodykite šios išankstinės sąskaitos datą ir numerį.</b></small></p>
         <br/><br/>
-        <p style="text-align: right;">$jobTitle $responsiblePersonName</p>
         <hr/>
     </body>
 </html>
