@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.nforce</groupId>
   <artifactId>TAZClients</artifactId>
-  <version>1.92</version>
+  <version>1.93</version>
   <name>TAZClients</name>
   <build>
     <plugins>

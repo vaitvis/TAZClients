@@ -22,7 +22,7 @@
 	            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
 	          </rowConstraints>
 	           <children>
-	              <Button mnemonicParsing="false" text="Filtruoti" onAction="#doFilter" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+	              <Button mnemonicParsing="false" onAction="#doFilter" text="Filtruoti" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
 	              <HBox>
 	                 <children>
 	                    <Label prefWidth="200.0" text="ID" />
@@ -68,6 +68,6 @@
 	        </GridPane>
         </content>
       </TitledPane>
-      <Pagination fx:id="pagination" />
+      <Pagination fx:id="pagination" maxPageIndicatorCount="50" />
    </items>
 </SplitPane>
